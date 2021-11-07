@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* ---------- null style ----------*/
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+/* ---------- general styles ----------*/
+
+body {
+  font-family: 'Roboto', sans-serif;
+
+  --custom-green: #099806;
+}
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__container {
+  width: 654px;
+
+  padding: 49px 109px 78px 79px;
+
+  position: relative;
+
+  box-shadow: 0px 4px 69px rgba(185, 185, 185, 0.25);
+  border-radius: 10px;
+}
+
+.title {
+  margin-bottom: 30px;
+
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.button {
+  width: 188px;
+  padding: 11px 0 10px 0;
+  text-align: center;
+  font-size: 20px;
+  line-height: 23px;
+  border: 1px solid var(--custom-green);
+  border-radius: 16px;
+}
+
+.modal .button {
+  width: 100%;
+}
+
+.button_green {
+  color: #fff;
+  background-color: var(--custom-green);
+}
+
+.button_outline-green {
+  color: var(--custom-green);
+  background-color: #fff;
+}
+
+.cancel-button {
+  --cancel-button-size: 28px;
+  --cancel-button-line-size: calc(var(--cancel-button-size) / 0.71);
+
+  width: var(--cancel-button-size);
+  height: var(--cancel-button-size);
+
+  position: absolute;
+  top: 41px;
+  right: 41px;
+
+  background-color: transparent;
+}
+
+.cancel-button::before, .cancel-button::after {
+  content: '';
+
+  width: var(--cancel-button-line-size);
+  height: 1px;
+
+  position: absolute;
+  top: calc(var(--cancel-button-size) / 2);
+  left: calc(-1 * (var(--cancel-button-line-size) - var(--cancel-button-size)) / 2);
+
+  background-color: #000;
+}
+
+.cancel-button::before {
+  transform: rotate(45deg);
+}
+
+.cancel-button::after {
+  transform: rotate(-45deg);
+}
+
+.form > div:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.input-field__label, .select-field__label  {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.input-field__input, .select-field__select {
+  width: 100%;
+
+  padding: 13px 17px;
+
+  font-size: 20px;
+  line-height: 23px;
+
+  border: 1px solid #000000;
+  border-radius: 4px;
+}
+
+input[type=date] {
+  display: inline-block;
+
+  width: auto;
+}
+
+input[type=date]:before {
+  content: attr(placeholder);
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+/* maaan */
+.select-field__placeholder {
+  display: none;
+}
+
+.select-field__option {
+  text-align: center;
+}
+
+.select-row {
+  display: flex;
+}
+
+.select-row__select-field .select-field__select {
+  text-align: center;
+}
+
+.select-row__select-field {
+  min-width: 98px;
+}
+
+.select-row__select-field:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* ---------- authorization ----------*/
+
+.authorization__container {
+  padding: 49px 94px 78px 94px;
+}
+
+.authorization__title {
+  margin-bottom: 25px;
+
+  text-align: center;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.authorization__input-field {
+  margin-bottom: 28px;
+}
+
+.authorization__input-field:nth-child(2) {
+  margin-bottom: 50px;
+}
+
+.authorization__button {
+  width: 100%;
+}
+
+/* ---------- primary stream create ----------*/
+

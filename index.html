@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Project</title>
+</head>
+<body>
+  <!-- <section class="authorization modal">
+    <div class="authorization__container modal__container">
+      <h2 class="authorization__title">Авторизация</h2>
+      <button class="authorization__cancel-button cancel-button"></button>
+      <form class="authorization__form">
+        <div class="authorization__input-field input-field">
+          <label class="input-field__label" for="login">Логин</label>
+          <input class="input-field__input" type="text" name="login">
+        </div>
+        <div class="authorization__input-field input-field">
+          <label class="input-field__label" for="password">Пароль</label>
+          <input class="input-field__input" type="password" name="password">
+        </div>
+        <button class="authorization__button button button_green" type="submit">
+          Войти
+        </button>
+      </form>
+    </div>
+  </section> -->
+  <section class="primary-stream-create modal">
+    <div class="modal__container">
+      <h2 class="primary-stream-create__title title">Создать</h2>
+      <button class="primary-stream-create__cancel-button cancel-button"></button>
+      <form class="primary-stream-create__form form">
+        <div class="primary-stream-create__input-field input-field">
+          <label class="input-field__label" for="date">Дата добавления</label>
+          <input class="input-field__input" placeholder="26/10/2021" name="date" type="date">
+        </div>
+        <div class="primary-stream-create__select-field select-field">
+          <label class="select-field__label" for="platform">Площадка</label>
+          <select class="select-field__select" name="platform">
+            <option class="select-field__placeholder" value="" disabled selected >Введите название площадки</option>
+            <option class="select-field__option" value="value1">Значение 1</option>
+            <option class="select-field__option" value="value2">Значение 2</option>
+            <option class="select-field__option" value="value3">Значение 3</option>
+          </select>
+        </div>
+        <div class="primary-stream-create__input-field input-field">
+          <label class="input-field__label" for="taskLink">Ссылка на задачу</label>
+          <input class="input-field__input" name="taskLink" type="link">
+        </div>
+        <div class="primary-stram-create__select-row select-row">
+          <div class="select-row__select-field select-field">
+            <label  class="select-field__label" for="feedback">Отклик</label>
+            <select class="select-field__select" name="feedback">
+              <option class="select-field__placeholder" value="" >0</option>
+              <option class="select-field__option" value="value1">1</option>
+              <option class="select-field__option" value="value2">2</option>
+              <option class="select-field__option" value="value3">3</option>
+            </select>
+          </div>
+          <div class="select-row__select-field select-field">
+            <label  class="select-field__label" for="inTable">В таблице</label>
+            <select class="select-field__select" name="inTable">
+              <option class="select-field__placeholder" value="" >0</option>
+              <option class="select-field__option" value="value1">1</option>
+              <option class="select-field__option" value="value2">2</option>
+              <option class="select-field__option" value="value3">3</option>
+            </select>
+          </div>
+          <div class="select-row__select-field select-field">
+            <label  class="select-field__label" for="leads">Лиды</label>
+            <select class="select-field__select" name="leads">
+              <option class="select-field__placeholder" value="" >0</option>
+              <option class="select-field__option" value="value1">1</option>
+              <option class="select-field__option" value="value2">2</option>
+              <option class="select-field__option" value="value3">3</option>
+            </select>
+          </div>
+        </div>
+        <button class="primary-stream-create__button button button_green">
+          Создать
+        </button>
+      </form>
+    </div>
+  </section>
+</body>
+</html>
