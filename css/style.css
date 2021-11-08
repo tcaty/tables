@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-/* ---------- null style ----------*/
+/* ---------- NULL STYLE ----------*/
 
 * {
   padding: 0;
@@ -68,12 +68,13 @@ img {
   vertical-align: top;
 }
 
-/* ---------- general styles ----------*/
+/* ---------- GENERAL STYLES ----------*/
 
 body {
   font-family: 'Roboto', sans-serif;
 
   --custom-green: #099806;
+  --light-grey: #A1A1A1;
 }
 
 .modal {
@@ -90,7 +91,7 @@ body {
 }
 
 .modal__container {
-  width: 654px;
+  width: 654px; 
 
   padding: 49px 109px 78px 79px;
 
@@ -167,18 +168,18 @@ body {
   transform: rotate(-45deg);
 }
 
-.form > div:not(:last-child) {
+.form > div {
   margin-bottom: 30px;
 }
 
-.input-field__label, .select-field__label  {
+.input-field__label, .select-field__label, .textarea-field__label  {
   display: block;
   margin-bottom: 7px;
   font-size: 16px;
   line-height: 19px;
 }
 
-.input-field__input, .select-field__select {
+.input-field__input, .select-field__select, .textarea-field__textarea {
   width: 100%;
 
   padding: 13px 17px;
@@ -190,18 +191,32 @@ body {
   border-radius: 4px;
 }
 
-input[type=date] {
-  display: inline-block;
-
-  width: auto;
+.input-field__input::-webkit-input-placeholder {
+  color: var(--light-grey);
 }
 
-input[type=date]:before {
+.input-field__input[type=date] {
+  width: 144px;
+}
+
+.input-field__input[type=date]::before {
   content: attr(placeholder);
+
+  color: var(--light-grey);
 }
 
-input[type=date]::-webkit-calendar-picker-indicator {
+.input-field__input[type=date]::-webkit-calendar-picker-indicator {
   opacity: 0;
+}
+
+.input-field__input[type=url] {
+  color: #0745A3;
+}
+
+.textarea-field__textarea {
+  height: 153px;
+
+  resize: none;
 }
 
 /* maaan */
@@ -226,10 +241,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .select-row__select-field:not(:last-child) {
-  margin-right: 30px;
+  margin-right: 41px;
 }
 
-/* ---------- authorization ----------*/
+/* ---------- AUTHORIZATION ----------*/
 
 .authorization__container {
   padding: 49px 94px 78px 94px;
@@ -256,5 +271,54 @@ input[type=date]::-webkit-calendar-picker-indicator {
   width: 100%;
 }
 
-/* ---------- primary stream create ----------*/
+/* ---------- PRIMARY STREAM CREATE ----------*/
 
+.primary-stream-create__button {
+  margin-top: 37px;
+}
+
+/* ---------- CREATE FOR EMPLOYEE ----------*/
+
+.create-for-employee__button {
+  margin-top: 16px;
+}
+
+/* ---------- TEST ----------*/
+
+.select-field {
+  width: 300px;
+}
+
+.select-field__input, .select-field__select {
+  width: 100%;
+}
+
+.select-field__select {
+  display: block;
+}
+
+.select-field__option:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+
+.select-field__input-wrapper {
+  padding: 5px;
+
+  position: relative;
+
+  border: 1px solid black;
+}
+
+.select-field__button {
+  content: '';
+
+  width: 10px;
+  height: 10px;
+
+  position: absolute;
+
+  top: 10px;
+  right: 15px;
+
+  background-color: black;
+}
