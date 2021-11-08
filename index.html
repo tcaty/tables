@@ -8,7 +8,7 @@
   <title>Project</title>
 </head>
 <body>
-  <section class="authorization modal" style="display: none;">
+  <div class="authorization modal" style="display: none;">
     <div class="authorization__container modal__container">
       <h2 class="authorization__title">Авторизация</h2>
       <button class="authorization__cancel-button cancel-button"></button>
@@ -26,9 +26,9 @@
         </button>
       </form>
     </div>
-  </section>
+  </div>
   
-  <section class="primary-stream-create modal" style="display: none;">
+  <div class="primary-stream-create modal" style="display: none;">
     <div class="modal__container">
       <h2 class="primary-stream-create__title title">Создать</h2>
       <button class="primary-stream-create__cancel-button cancel-button"></button>
@@ -84,9 +84,9 @@
         </button>
       </form>
     </div>
-  </section>
+  </div>
 
-  <section class="create-for-employee modal" style="display: none;">
+  <div class="create-for-employee modal" style="display: none;">
     <div class="modal__container">
       <h2 class="create-for-employee__title title">Создать</h2>
       <button class="create-for-employee__cancel-button cancel-button"></button>
@@ -156,7 +156,7 @@
         <button class="create-for-employee__button button button_green">Создать</button>
       </form>
     </div>
-  </section>
+  </div>
 
   <div class="comment-click-create modal" style="display: none;">
     <div class="modal__container">
@@ -234,7 +234,7 @@
     </div>
   </div>
 
-  <div class="test">
+  <div class="test" style="display: auto;">
     <div class="select-field">
       <div class="select-field__input-wrapper">
         <input class="select-field__input" placeholder="Введите значение" type="text" >
@@ -248,6 +248,21 @@
     </div>
   </div>
 
+  <div class="test" style="display: auto;">
+    <div class="select-field">
+      <div class="select-field__input-wrapper">
+        <input class="select-field__input" placeholder="Введите значение" type="text" >
+        <button class="select-field__button"></button>
+      </div>
+      <ul class="select-field__select">
+        <li class="select-field__option">значение 1</li>
+        <li class="select-field__option">значение 2</li>
+        <li class="select-field__option">значение 3</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="./js/index.js"></script>
 </body>
 </html>
