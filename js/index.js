@@ -1,4 +1,6 @@
 
+// --------- select field ---------
+
 const isSelectVisible = (select) => {
     const display = $(select).css('display');
     return display === '' || display === 'block'
@@ -24,22 +26,46 @@ const toggleSelectFieldStyles = (selectField) => {
 
 const setSelectHandlers = () => {
     for (let button of $('.select-field__button')) {
-        $(button).click(function() {
+        $(button).click(function(event) {
             const selectField = $(this).closest('.select-field')
             toggleSelectFieldStyles(selectField)
+            event.preventDefault();
         })
     }
 
     for (let option of $('.select-field__option')) {
         $(option).click(function() {
-            const input = $(this).closest('.select-field').find('.select-field__input')
+            const selectField = $(this).closest('.select-field')
+            const input = $(selectField).find('.select-field__input')
+            const select = $(selectField).find('.select-field__select')
+            
             input.val($(this).text())
+            $(select).css('display', 'none')
         })
     }
 }
 
+
+// --------- cacnel button ---------
+
+const cancelButtonClickHandler = (currnetModal) => {
+    $(currnetModal).css('display', 'none')
+}
+
+const setCancelButtonClickHandler = () => {
+    for (let button of $('.cancel-button')) {
+        $(button).click(function(event) {
+            const currnetModal = $(this).closest('.modal');
+            cancelButtonClickHandler(currnetModal);
+            event.preventDefault();
+        })
+    }
+}
+
+
 $(document).ready(() => {
-    setSelectHandlers()
+    setSelectHandlers();
+    setCancelButtonClickHandler();
 })
 
 
