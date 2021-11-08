@@ -8,11 +8,11 @@
   <title>Project</title>
 </head>
 <body>
-  <!-- <section class="authorization modal">
+  <section class="authorization modal" style="display: none;">
     <div class="authorization__container modal__container">
       <h2 class="authorization__title">Авторизация</h2>
       <button class="authorization__cancel-button cancel-button"></button>
-      <form class="authorization__form">
+      <form class="authorization__form" action="#">
         <div class="authorization__input-field input-field">
           <label class="input-field__label" for="login">Логин</label>
           <input class="input-field__input" type="text" name="login">
@@ -26,12 +26,13 @@
         </button>
       </form>
     </div>
-  </section> -->
-  <section class="primary-stream-create modal">
+  </section>
+  
+  <section class="primary-stream-create modal" style="display: none;">
     <div class="modal__container">
       <h2 class="primary-stream-create__title title">Создать</h2>
       <button class="primary-stream-create__cancel-button cancel-button"></button>
-      <form class="primary-stream-create__form form">
+      <form class="primary-stream-create__form form" action="#">
         <div class="primary-stream-create__input-field input-field">
           <label class="input-field__label" for="date">Дата добавления</label>
           <input class="input-field__input" placeholder="26/10/2021" name="date" type="date">
@@ -47,11 +48,11 @@
         </div>
         <div class="primary-stream-create__input-field input-field">
           <label class="input-field__label" for="taskLink">Ссылка на задачу</label>
-          <input class="input-field__input" name="taskLink" type="link">
+          <input class="input-field__input" placeholder="Введите ссылку на задачу" name="taskLink" type="url">
         </div>
-        <div class="primary-stram-create__select-row select-row">
+        <div class="primary-stream-create__select-row select-row">
           <div class="select-row__select-field select-field">
-            <label  class="select-field__label" for="feedback">Отклик</label>
+            <label class="select-field__label" for="feedback">Отклик</label>
             <select class="select-field__select" name="feedback">
               <option class="select-field__placeholder" value="" >0</option>
               <option class="select-field__option" value="value1">1</option>
@@ -84,5 +85,169 @@
       </form>
     </div>
   </section>
+
+  <section class="create-for-employee modal" style="display: none;">
+    <div class="modal__container">
+      <h2 class="create-for-employee__title title">Создать</h2>
+      <button class="create-for-employee__cancel-button cancel-button"></button>
+      <form class="create-for-employee__form form" action="#">
+        <div class="create-for-employee__input-field input-field">
+          <label class="input-field__label" for="date">Дата добавления</label>
+          <input class="input-field__input" placeholder="26/10/2021" name="date" type="date">
+        </div>
+        <div class="create-for-employee__select-field select-field">
+          <label class="select-field__label" for="platform">Площадка</label>
+          <select class="select-field__select" name="platform">
+            <option class="select-field__placeholder" value="" disabled selected >Введите название площадки</option>
+            <option class="select-field__option" value="value1">Значение 1</option>
+            <option class="select-field__option" value="value2">Значение 2</option>
+            <option class="select-field__option" value="value3">Значение 3</option>
+          </select>
+        </div>
+        <div class="create-for-employee__input-field input-field">
+          <label class="input-field__label" for="taskLink">Ссылка на задачу</label>
+          <input class="input-field__input" placeholder="Введите ссылку на задачу" name="taskLink" type="url">
+        </div>
+        <div class="create-for-employee__select-row select-row">
+          <div class="select-row__select-field select-field">
+            <label class="select-field__label" for="feedback">Отклик</label>
+            <select class="select-field__select" name="feedback">
+              <option class="select-field__placeholder" value="" >0</option>
+              <option class="select-field__option" value="value1">1</option>
+              <option class="select-field__option" value="value2">2</option>
+              <option class="select-field__option" value="value3">3</option>
+            </select>
+          </div>
+          <div class="select-row__select-field select-field">
+            <label  class="select-field__label" for="inTable">В таблице</label>
+            <select class="select-field__select" name="inTable">
+              <option class="select-field__placeholder" value="" >0</option>
+              <option class="select-field__option" value="value1">1</option>
+              <option class="select-field__option" value="value2">2</option>
+              <option class="select-field__option" value="value3">3</option>
+            </select>
+          </div>
+          <div class="select-row__select-field select-field">
+            <label  class="select-field__label" for="leads">Лиды</label>
+            <select class="select-field__select" name="leads">
+              <option class="select-field__placeholder" value="" >0</option>
+              <option class="select-field__option" value="value1">1</option>
+              <option class="select-field__option" value="value2">2</option>
+              <option class="select-field__option" value="value3">3</option>
+            </select>
+          </div>
+        </div>
+        <div class="create-for-employee__input-field input-field">
+          <label class="input-field__label" for="url">Ссылка на сайт / URL</label>
+          <input class="input-field__input" placeholder="Введите ссылку на сайт" name="url" type="url">
+        </div>
+        <div class="create-for-employee__input-field input-field">
+          <label class="input-field__label" for="phone">Контактный номер</label>
+          <input class="input-field__input" placeholder="Введите контактный номер" name="phone" type="url">
+        </div>
+        <div class="create-for-employee__textarea-field textarea-field">
+          <label class="textarea-field__label" for="taskDescription">Описание задачи</label>
+          <textarea class="textarea-field__textarea" placeholder="Опишите задачу" name="taskDescription"></textarea>
+        </div>
+        <div class="create-for-employee__textarea-field textarea-field">
+          <label class="textarea-field__label" for="comment">Комментарий</label>
+          <textarea class="textarea-field__textarea" name="comment"></textarea>
+        </div>
+        <button class="create-for-employee__button button button_green">Создать</button>
+      </form>
+    </div>
+  </section>
+
+  <div class="comment-click-create modal" style="display: none;">
+    <div class="modal__container">
+      <h2 class="comment-click-create__title title">Создать</h2>
+      <button class="comment-click-create__cancel-button cancel-button"></button>
+      <form class="comment-click-create__form form">
+        <div class="comment-click-create__input-field input-field">
+          <label class="input-field__label" for="date">Дата добавления</label>
+          <input class="input-field__input" placeholder="26/10/2021" name="date" type="date">
+        </div>
+        <div class="comment-click-create__select-field select-field">
+          <label class="select-field__label" for="platform">Площадка</label>
+          <select class="select-field__select" name="platform">
+            <option class="select-field__placeholder" value="" disabled selected="selected" >Введите название площадки</option>
+            <option class="select-field__option" value="value1">Значение 1</option>
+            <option class="select-field__option" value="value2">Значение 2</option>
+            <option class="select-field__option" value="value3">Значение 3</option>
+          </select>
+        </div>
+        <div class="comment-click-create__input-field input-field">
+          <label class="input-field__label" for="employee" >Кто добавил</label>
+          <input class="input-field__input"  name="employee" type="text">
+        </div>
+        <div class="comment-click-create__input-field input-field">
+          <label class="input-field__label" for="taskLink">Ссылка на задачу</label>
+          <input class="input-field__input" placeholder="Введите ссылку на задачу" name="taskLink" type="url">
+        </div>
+        <div class="comment-click-create__select-row select-row">
+          <div class="select-row__select-field select-field">
+            <label class="select-field__label" for="feedback">Отклик</label>
+            <select class="select-field__select" name="feedback">
+              <option class="select-field__placeholder" value="" >0</option>
+              <option class="select-field__option" value="value1">1</option>
+              <option class="select-field__option" value="value2">2</option>
+              <option class="select-field__option" value="value3">3</option>
+            </select>
+          </div>
+          <div class="select-row__select-field select-field">
+            <label  class="select-field__label" for="inTable">В таблице</label>
+            <select class="select-field__select" name="inTable">
+              <option class="select-field__placeholder" value="" >0</option>
+              <option class="select-field__option" value="value1">1</option>
+              <option class="select-field__option" value="value2">2</option>
+              <option class="select-field__option" value="value3">3</option>
+            </select>
+          </div>
+          <div class="select-row__select-field select-field">
+            <label  class="select-field__label" for="leads">Лиды</label>
+            <select class="select-field__select" name="leads">
+              <option class="select-field__placeholder" value="" >0</option>
+              <option class="select-field__option" value="value1">1</option>
+              <option class="select-field__option" value="value2">2</option>
+              <option class="select-field__option" value="value3">3</option>
+            </select>
+          </div>
+        </div>
+        <div class="comment-click-create__input-field input-field">
+          <label class="input-field__label" for="url">Ссылка на сайт / URL</label>
+          <input class="input-field__input" placeholder="Введите ссылку на сайт" name="url" type="url">
+        </div>
+        <div class="comment-click-create__input-field input-field">
+          <label class="input-field__label" for="phone">Контактный номер</label>
+          <input class="input-field__input" type="text" name="phone" pattern="[0-9]{6,11}">
+        </div>
+        <div class="comment-click-create__textarea-field textarea-field">
+          <label class="textarea-field__label" for="taskDescription">Описание задачи</label>
+          <textarea class="textarea-field__textarea" placeholder="Опишите задачу" name="taskDescription"></textarea>
+        </div>
+        <div class="comment-click-create__textarea-field textarea-field">
+          <label class="textarea-field__label" for="comment">Комментарий</label>
+          <textarea class="textarea-field__textarea" name="comment"></textarea>
+        </div>
+        <button class="comment-click-create__button button button_green">Создать</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="test">
+    <div class="select-field">
+      <div class="select-field__input-wrapper">
+        <input class="select-field__input" placeholder="Введите значение" type="text" >
+        <button class="select-field__button"></button>
+      </div>
+      <ul class="select-field__select">
+        <li class="select-field__option">значение 1</li>
+        <li class="select-field__option">значение 2</li>
+        <li class="select-field__option">значение 3</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="./js/index.js"></script>
 </body>
 </html>
