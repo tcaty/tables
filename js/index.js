@@ -16,19 +16,29 @@ const toggleInputBorderRadius = (select, input) => {
    $(input).css('border-radius', newBorderRadius)
 }
 
-const toggleSelectFieldStyles = (selectField) => {
+const toggleButtonClass = (select, button) => {
+    console.log(button)
+    if (isSelectVisible(select)) {
+        $(button).toggleClass('select-field__button_down select-field__button_up')
+    } else {
+        $(button).toggleClass('select-field__button_up select-field__button_down')
+    }
+}
+
+const toggleSelectFieldStyles = (selectField, button) => {
     const select = $(selectField).find('.select-field__select')
     const input = $(selectField).find('.select-field__input')
 
     toggleSelectDisplay(select);
     toggleInputBorderRadius(select, input)
+    toggleButtonClass(select, button);
 }
 
 const setSelectHandlers = () => {
     for (let button of $('.select-field__button')) {
         $(button).click(function(event) {
             const selectField = $(this).closest('.select-field')
-            toggleSelectFieldStyles(selectField)
+            toggleSelectFieldStyles(selectField, button)
             event.preventDefault();
         })
     }
@@ -62,10 +72,29 @@ const setCancelButtonClickHandler = () => {
     }
 }
 
+// --------- input date ---------
+
+const formatDate = (dayMonth) => {
+    return String(dayMonth).length < 2 ? `0${dayMonth}` : String(dayMonth)
+}
+
+const getTodayDate = () => {
+    const date = new Date(Date.now())
+    console.log(date.getMonth())
+    return `${formatDate(date.getDate())}/${formatDate(date.getMonth() + 1)}/${date.getFullYear()}`
+}
+
+const setInputDateSettings = () => {
+    for (let input of $('.input-field__input[name=date]')) {
+        $(input).attr('placeholder', getTodayDate())
+        $(input).inputmask('99/99/9999')
+    }
+}
 
 $(document).ready(() => {
     setSelectHandlers();
     setCancelButtonClickHandler();
+    setInputDateSettings();
 })
 
 
