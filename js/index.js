@@ -27,7 +27,7 @@ const toggleButtonClass = (select, button) => {
 
 const toggleSelectFieldStyles = (selectField, button) => {
     const select = $(selectField).find('.select-field__select')
-    const input = $(selectField).find('.select-field__input')
+    const input = $(selectField).find('.input')
 
     toggleSelectDisplay(select);
     toggleInputBorderRadius(select, input)
@@ -46,7 +46,7 @@ const setSelectHandlers = () => {
     for (let option of $('.select-field__option')) {
         $(option).click(function() {
             const selectField = $(this).closest('.select-field')
-            const input = $(selectField).find('.select-field__input')
+            const input = $(selectField).find('.input')
             const select = $(selectField).find('.select-field__select')
             
             input.val($(this).text())
@@ -58,16 +58,32 @@ const setSelectHandlers = () => {
 
 // --------- cacnel button ---------
 
-const cancelButtonClickHandler = (currnetModal) => {
-    $(currnetModal).css('display', 'none')
+const cancelButtonClickHandler = (modal) => {
+    $(modal).css('display', 'none')
 }
 
 const setCancelButtonClickHandler = () => {
     for (let button of $('.cancel-button')) {
         $(button).click(function(event) {
-            const currnetModal = $(this).closest('.modal');
-            cancelButtonClickHandler(currnetModal);
+            const modal = $(this).closest('.modal');
+            cancelButtonClickHandler(modal);
             event.preventDefault();
+        })
+    }
+}
+
+// --------- modal ---------
+
+const hideModal = (modal) => {
+    $(modal).css('display', 'none');
+}
+
+const setClickModalHandlers = () => {
+    for (let modal of $('.modal')) {
+        $(modal).click(function(event) {
+            if ($(event.target).closest('.modal__container').length === 0) {
+                hideModal(modal);
+            }
         })
     }
 }
@@ -85,7 +101,7 @@ const getTodayDate = () => {
 }
 
 const setInputDateSettings = () => {
-    for (let input of $('.input-field__input[name=date]')) {
+    for (let input of $('.input[name=date]')) {
         $(input).attr('placeholder', getTodayDate())
         $(input).inputmask('99/99/9999')
     }
@@ -95,6 +111,7 @@ $(document).ready(() => {
     setSelectHandlers();
     setCancelButtonClickHandler();
     setInputDateSettings();
+    setClickModalHandlers();
 })
 
 

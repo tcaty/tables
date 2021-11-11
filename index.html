@@ -8,39 +8,39 @@
   <title>Project</title>
 </head>
 <body>
-  <div class="authorization modal" style="display: none;">
-    <div class="authorization__container modal__container">
-      <h2 class="authorization__title">Авторизация</h2>
-      <button class="authorization__cancel-button cancel-button"></button>
-      <form class="authorization__form" action="#">
-        <div class="authorization__input-field input-field">
-          <label class="input-field__label" for="login">Логин</label>
-          <input class="input-field__input" type="text" name="login">
+  <div class="modal modal-authorization" style="display: none;">
+    <div class="modal__container">
+      <h2 class="title">Авторизация</h2>
+      <button class="cancel-button cancel-button"></button>
+      <form class="form" action="#">
+        <div class="input-field">
+          <label class="label" for="login">Логин</label>
+          <input class="input" type="text" name="login">
         </div>
-        <div class="authorization__input-field input-field">
-          <label class="input-field__label" for="password">Пароль</label>
-          <input class="input-field__input" type="password" name="password">
+        <div class="input-field">
+          <label class="label" for="password">Пароль</label>
+          <input class="input" type="password" name="password">
         </div>
-        <button class="authorization__button button button_green" type="submit">
+        <button class="button button_green" type="submit">
           Войти
         </button>
       </form>
     </div>
   </div>
   
-  <div class="primary-stream-create modal" style="display: none;">
+  <div class="modal modal-primary-stream" style="display: none;">
     <div class="modal__container">
-      <h2 class="primary-stream-create__title title">Создать</h2>
-      <button class="primary-stream-create__cancel-button cancel-button"></button>
-      <form class="primary-stream-create__form form" action="#">
-        <div class="primary-stream-create__input-field input-field">
-          <label class="input-field__label" for="date">Дата добавления</label>
-          <input class="input-field__input" name="date" type="text">
+      <h2 class="title">Создать</h2>
+      <button class="cancel-button"></button>
+      <form class="form" action="#">
+        <div class="input-field">
+          <label class="label" for="date">Дата добавления</label>
+          <input class="input" name="date" type="text">
         </div>
-        <div class="primary-stream-create__select-field select-field">
+        <div class="select-field">
           <div class="select-field__input-wrapper">
-            <label class="select-field__label" for="platform">Площадка</label>
-            <input class="select-field__input" placeholder="Введите значение" type="text" name="platform">
+            <label class="label" for="platform">Площадка</label>
+            <input class="input" placeholder="Введите значение" type="text" name="platform">
             <button class="select-field__button select-field__button_down"></button>
           </div>
           <ul class="select-field__select">
@@ -49,173 +49,15 @@
             <li class="select-field__option">значение 3</li>
           </ul>
         </div>
-        <div class="primary-stream-create__input-field input-field">
-          <label class="input-field__label" for="taskLink">Ссылка на задачу</label>
-          <input class="input-field__input" placeholder="Введите ссылку на задачу" name="taskLink" type="url">
+        <div class="input-field">
+          <label class="label" for="taskLink">Ссылка на задачу</label>
+          <input class="input" placeholder="Введите ссылку на задачу" name="taskLink" type="url">
         </div>
-        <div class="primary-stream-create__select-row select-row">
+        <div class="select-row">
           <div class="select-row__select-field select-field">
             <div class="select-field__input-wrapper">
-              <label class="select-field__label" for="feedback">Отклик</label>
-              <input class="select-field__input" placeholder="0" type="text" name="feedback">
-              <button class="select-field__button  select-field__button_down"></button>
-            </div>
-            <ul class="select-field__select">
-              <li class="select-field__option">0</li>
-              <li class="select-field__option">1</li>
-              <li class="select-field__option">2</li>
-            </ul>
-          </div>
-          <div class="select-row__select-field select-field">
-            <div class="select-field__input-wrapper">
-              <label class="select-field__label" for="inTable">Отклик</label>
-              <input class="select-field__input" placeholder="0" type="text" name="inTable">
-              <button class="select-field__button  select-field__button_down"></button>
-            </div>
-            <ul class="select-field__select">
-              <li class="select-field__option">0</li>
-              <li class="select-field__option">1</li>
-              <li class="select-field__option">2</li>
-            </ul>
-          </div>
-          <div class="select-row__select-field select-field">
-            <div class="select-field__input-wrapper">
-              <label class="select-field__label" for="leads">Отклик</label>
-              <input class="select-field__input" placeholder="0" type="text" name="leads">
-              <button class="select-field__button  select-field__button_down"></button>
-            </div>
-            <ul class="select-field__select">
-              <li class="select-field__option">0</li>
-              <li class="select-field__option">1</li>
-              <li class="select-field__option">2</li>
-            </ul>
-          </div>
-        </div>
-        <button class="primary-stream-create__button button button_green">
-          Создать
-        </button>
-      </form>
-    </div>
-  </div>
-
-  <div class="create-for-employee modal" style="display: none;">
-    <div class="modal__container">
-      <h2 class="create-for-employee__title title">Создать</h2>
-      <button class="create-for-employee__cancel-button cancel-button"></button>
-      <form class="create-for-employee__form form" action="#">
-        <div class="create-for-employee__input-field input-field">
-          <label class="input-field__label" for="date">Дата добавления</label>
-          <input class="input-field__input" name="date" type="text">
-        </div>
-        <div class="create-for-employee__select-field select-field">
-          <div class="select-field__input-wrapper">
-            <label class="select-field__label" for="platform">Площадка</label>
-            <input class="select-field__input" placeholder="Введите значение" type="text" name="platform">
-            <button class="select-field__button select-field__button_down"></button>
-          </div>
-          <ul class="select-field__select">
-            <li class="select-field__option">значение 1</li>
-            <li class="select-field__option">значение 2</li>
-            <li class="select-field__option">значение 3</li>
-          </ul>
-        </div>
-        <div class="create-for-employee__input-field input-field">
-          <label class="input-field__label" for="taskLink">Ссылка на задачу</label>
-          <input class="input-field__input" placeholder="Введите ссылку на задачу" name="taskLink" type="url">
-        </div>
-        <div class="create-for-employee__select-row select-row">
-          <div class="select-row__select-field select-field">
-            <div class="select-field__input-wrapper">
-              <label class="select-field__label" for="feedback">Отклик</label>
-              <input class="select-field__input" placeholder="0" type="text" name="feedback">
-              <button class="select-field__button  select-field__button_down"></button>
-            </div>
-            <ul class="select-field__select">
-              <li class="select-field__option">0</li>
-              <li class="select-field__option">1</li>
-              <li class="select-field__option">2</li>
-            </ul>
-          </div>
-          <div class="select-row__select-field select-field">
-            <div class="select-field__input-wrapper">
-              <label class="select-field__label" for="inTable">Отклик</label>
-              <input class="select-field__input" placeholder="0" type="text" name="inTable">
-              <button class="select-field__button  select-field__button_down"></button>
-            </div>
-            <ul class="select-field__select">
-              <li class="select-field__option">0</li>
-              <li class="select-field__option">1</li>
-              <li class="select-field__option">2</li>
-            </ul>
-          </div>
-          <div class="select-row__select-field select-field">
-            <div class="select-field__input-wrapper">
-              <label class="select-field__label" for="leads">Отклик</label>
-              <input class="select-field__input" placeholder="0" type="text" name="leads">
-              <button class="select-field__button  select-field__button_down"></button>
-            </div>
-            <ul class="select-field__select">
-              <li class="select-field__option">0</li>
-              <li class="select-field__option">1</li>
-              <li class="select-field__option">2</li>
-            </ul>
-          </div>
-        </div>
-        <div class="create-for-employee__input-field input-field">
-          <label class="input-field__label" for="url">Ссылка на сайт / URL</label>
-          <input class="input-field__input" placeholder="Введите ссылку на сайт" name="url" type="url">
-        </div>
-        <div class="create-for-employee__input-field input-field">
-          <label class="input-field__label" for="phone">Контактный номер</label>
-          <input class="input-field__input" placeholder="Введите контактный номер" name="phone" type="url">
-        </div>
-        <div class="create-for-employee__textarea-field textarea-field">
-          <label class="textarea-field__label" for="taskDescription">Описание задачи</label>
-          <textarea class="textarea-field__textarea" placeholder="Опишите задачу" name="taskDescription"></textarea>
-        </div>
-        <div class="create-for-employee__textarea-field textarea-field">
-          <label class="textarea-field__label" for="comment">Комментарий</label>
-          <textarea class="textarea-field__textarea" name="comment"></textarea>
-        </div>
-        <button class="create-for-employee__button button button_green">Создать</button>
-      </form>
-    </div>
-  </div>
-
-  <div class="comment-click-create modal" style="display: none;">
-    <div class="modal__container">
-      <h2 class="comment-click-create__title title">Создать</h2>
-      <button class="comment-click-create__cancel-button cancel-button"></button>
-      <form class="comment-click-create__form form">
-        <div class="comment-click-create__input-field input-field">
-          <label class="input-field__label" for="date">Дата добавления</label>
-          <input class="input-field__input" name="date" type="text">
-        </div>
-        <div class="comment-click-create__select-field select-field">
-          <div class="select-field__input-wrapper">
-            <label class="select-field__label" for="platform">Площадка</label>
-            <input class="select-field__input" placeholder="Введите значение" type="text" name="platform">
-            <button class="select-field__button  select-field__button_down"></button>
-          </div>
-          <ul class="select-field__select">
-            <li class="select-field__option">значение 1</li>
-            <li class="select-field__option">значение 2</li>
-            <li class="select-field__option">значение 3</li>
-          </ul>
-        </div>
-        <div class="comment-click-create__input-field input-field">
-          <label class="input-field__label" for="employee" >Кто добавил</label>
-          <input class="input-field__input"  name="employee" type="text">
-        </div>
-        <div class="comment-click-create__input-field input-field">
-          <label class="input-field__label" for="taskLink">Ссылка на задачу</label>
-          <input class="input-field__input" placeholder="Введите ссылку на задачу" name="taskLink" type="url">
-        </div>
-        <div class="comment-click-create__select-row select-row">
-          <div class="select-row__select-field select-field">
-            <div class="select-field__input-wrapper">
-              <label class="select-field__label" for="feedback">Отклик</label>
-              <input class="select-field__input" placeholder="0" type="text" name="feedback">
+              <label class="label" for="feedback">Отклик</label>
+              <input class="input" placeholder="0" type="text" name="feedback">
               <button class="select-field__button select-field__button_down"></button>
             </div>
             <ul class="select-field__select">
@@ -226,8 +68,8 @@
           </div>
           <div class="select-row__select-field select-field">
             <div class="select-field__input-wrapper">
-              <label class="select-field__label" for="inTable">Отклик</label>
-              <input class="select-field__input" placeholder="0" type="text" name="inTable">
+              <label class="label" for="table">В таблице</label>
+              <input class="input" placeholder="0" type="text" name="table">
               <button class="select-field__button  select-field__button_down"></button>
             </div>
             <ul class="select-field__select">
@@ -238,8 +80,8 @@
           </div>
           <div class="select-row__select-field select-field">
             <div class="select-field__input-wrapper">
-              <label class="select-field__label" for="leads">Отклик</label>
-              <input class="select-field__input" placeholder="0" type="text" name="leads">
+              <label class="label" for="leads">Лиды</label>
+              <input class="input" placeholder="0" type="text" name="leads">
               <button class="select-field__button  select-field__button_down"></button>
             </div>
             <ul class="select-field__select">
@@ -249,20 +91,178 @@
             </ul>
           </div>
         </div>
-        <div class="comment-click-create__input-field input-field">
-          <label class="input-field__label" for="url">Ссылка на сайт / URL</label>
-          <input class="input-field__input" placeholder="Введите ссылку на сайт" name="url" type="url">
+        <button class="button button_green">
+          Создать
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal modal-for-employee" style="display: none;">
+    <div class="modal__container">
+      <h2 class="title">Создать</h2>
+      <button class="cancel-button"></button>
+      <form class="form" action="#">
+        <div class="input-field">
+          <label class="label" for="date">Дата добавления</label>
+          <input class="input" name="date" type="text">
         </div>
-        <div class="comment-click-create__input-field input-field">
-          <label class="input-field__label" for="phone">Контактный номер</label>
-          <input class="input-field__input" type="text" name="phone" pattern="[0-9]{6,11}">
+        <div class="select-field">
+          <div class="select-field__input-wrapper">
+            <label class="label" for="platform">Площадка</label>
+            <input class="input" placeholder="Введите значение" type="text" name="platform">
+            <button class="select-field__button select-field__button_down"></button>
+          </div>
+          <ul class="select-field__select">
+            <li class="select-field__option">значение 1</li>
+            <li class="select-field__option">значение 2</li>
+            <li class="select-field__option">значение 3</li>
+          </ul>
         </div>
-        <div class="comment-click-create__textarea-field textarea-field">
-          <label class="textarea-field__label" for="taskDescription">Описание задачи</label>
+        <div class="input-field">
+          <label class="label" for="taskLink">Ссылка на задачу</label>
+          <input class="input" placeholder="Введите ссылку на задачу" name="taskLink" type="url">
+        </div>
+        <div class="select-row">
+          <div class="select-row__select-field select-field">
+            <div class="select-field__input-wrapper">
+              <label class="label" for="feedback">Отклик</label>
+              <input class="input" placeholder="0" type="text" name="feedback">
+              <button class="select-field__button  select-field__button_down"></button>
+            </div>
+            <ul class="select-field__select">
+              <li class="select-field__option">0</li>
+              <li class="select-field__option">1</li>
+              <li class="select-field__option">2</li>
+            </ul>
+          </div>
+          <div class="select-row__select-field select-field">
+            <div class="select-field__input-wrapper">
+              <label class="label" for="table">В таблице</label>
+              <input class="input" placeholder="0" type="text" name="table">
+              <button class="select-field__button  select-field__button_down"></button>
+            </div>
+            <ul class="select-field__select">
+              <li class="select-field__option">0</li>
+              <li class="select-field__option">1</li>
+              <li class="select-field__option">2</li>
+            </ul>
+          </div>
+          <div class="select-row__select-field select-field">
+            <div class="select-field__input-wrapper">
+              <label class="label" for="leads">Лиды</label>
+              <input class="input" placeholder="0" type="text" name="leads">
+              <button class="select-field__button  select-field__button_down"></button>
+            </div>
+            <ul class="select-field__select">
+              <li class="select-field__option">0</li>
+              <li class="select-field__option">1</li>
+              <li class="select-field__option">2</li>
+            </ul>
+          </div>
+        </div>
+        <div class="input-field">
+          <label class="label" for="url">Ссылка на сайт / URL</label>
+          <input class="input" placeholder="Введите ссылку на сайт" name="url" type="url">
+        </div>
+        <div class="input-field">
+          <label class="label" for="phone">Контактный номер</label>
+          <input class="input" placeholder="Введите контактный номер" name="phone" type="phone">
+        </div>
+        <div class="textarea-field">
+          <label class="label" for="taskDescription">Описание задачи</label>
           <textarea class="textarea-field__textarea" placeholder="Опишите задачу" name="taskDescription"></textarea>
         </div>
-        <div class="comment-click-create__textarea-field textarea-field">
-          <label class="textarea-field__label" for="comment">Комментарий</label>
+        <div class="textarea-field">
+          <label class="label" for="comment">Комментарий</label>
+          <textarea class="textarea-field__textarea" name="comment"></textarea>
+        </div>
+        <button class="button button_green">Создать</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal modal-comment-click" style="display: none;">
+    <div class="modal__container">
+      <h2 class="title">Создать</h2>
+      <button class="cancel-button"></button>
+      <form class="form">
+        <div class="input-field">
+          <label class="label" for="date">Дата добавления</label>
+          <input class="input" name="date" type="text">
+        </div>
+        <div class="select-field">
+          <div class="select-field__input-wrapper">
+            <label class="label" for="platform">Площадка</label>
+            <input class="input" placeholder="Введите значение" type="text" name="platform">
+            <button class="select-field__button  select-field__button_down"></button>
+          </div>
+          <ul class="select-field__select">
+            <li class="select-field__option">значение 1</li>
+            <li class="select-field__option">значение 2</li>
+            <li class="select-field__option">значение 3</li>
+          </ul>
+        </div>
+        <div class="input-field">
+          <label class="label" for="employee" >Кто добавил</label>
+          <input class="input"  name="employee" type="text">
+        </div>
+        <div class="input-field">
+          <label class="label" for="taskLink">Ссылка на задачу</label>
+          <input class="input" placeholder="Введите ссылку на задачу" name="taskLink" type="url">
+        </div>
+        <div class="select-row">
+          <div class="select-row__select-field select-field">
+            <div class="select-field__input-wrapper">
+              <label class="label" for="feedback">Отклик</label>
+              <input class="input" placeholder="0" type="text" name="feedback">
+              <button class="select-field__button  select-field__button_down"></button>
+            </div>
+            <ul class="select-field__select">
+              <li class="select-field__option">0</li>
+              <li class="select-field__option">1</li>
+              <li class="select-field__option">2</li>
+            </ul>
+          </div>
+          <div class="select-row__select-field select-field">
+            <div class="select-field__input-wrapper">
+              <label class="label" for="table">В таблице</label>
+              <input class="input" placeholder="0" type="text" name="table">
+              <button class="select-field__button  select-field__button_down"></button>
+            </div>
+            <ul class="select-field__select">
+              <li class="select-field__option">0</li>
+              <li class="select-field__option">1</li>
+              <li class="select-field__option">2</li>
+            </ul>
+          </div>
+          <div class="select-row__select-field select-field">
+            <div class="select-field__input-wrapper">
+              <label class="label" for="leads">Лиды</label>
+              <input class="input" placeholder="0" type="text" name="leads">
+              <button class="select-field__button  select-field__button_down"></button>
+            </div>
+            <ul class="select-field__select">
+              <li class="select-field__option">0</li>
+              <li class="select-field__option">1</li>
+              <li class="select-field__option">2</li>
+            </ul>
+          </div>
+        </div>
+        <div class="input-field">
+          <label class="label" for="url">Ссылка на сайт / URL</label>
+          <input class="input" placeholder="Введите ссылку на сайт" name="url" type="url">
+        </div>
+        <div class="input-field">
+          <label class="label" for="phone">Контактный номер</label>
+          <input class="input" type="text" name="phone" pattern="[0-9]{6,11}">
+        </div>
+        <div class="textarea-field">
+          <label class="label" for="taskDescription">Описание задачи</label>
+          <textarea class="textarea-field__textarea" placeholder="Опишите задачу" name="taskDescription"></textarea>
+        </div>
+        <div class="textarea-field">
+          <label class="label" for="comment">Комментарий</label>
           <textarea class="textarea-field__textarea" name="comment"></textarea>
         </div>
         <button class="comment-click-create__button button button_green">Создать</button>
@@ -270,7 +270,7 @@
     </div>
   </div>
 
-  <main class="main">
+  <main class="main" style="display: auto;">
     <aside class="main__aside aside">
       <nav class="aside__nav nav">
         <h2 class="nav__title main__title">Меню</h2>
@@ -290,63 +290,6 @@
     <section class="main__calling-for-admin calling-for-admin">
       <div class="main__container">
         <h2 class="calling-for-admin__title main__title">Прозвон</h2>
-        <div class="calling-for-admin__top-row top-row">
-          <div class="top-row__left-side">
-            <form action="" class="filters-wrapper">
-              <div class="filters">
-
-                <div class="calling-for-admin__select-field select-field">
-                  <div class="select-field__input-wrapper">
-                    <label class="select-field__label" for="leads">Обработано</label>
-                    <input class="select-field__input" type="text" name="leads">
-                    <button class="select-field__button  select-field__button_down"></button>
-                  </div>
-                  <ul class="select-field__select">
-                    <li class="select-field__option">0</li>
-                    <li class="select-field__option">1</li>
-                    <li class="select-field__option">2</li>
-                  </ul>
-                </div>
-
-                <div class="calling-for-admin__input-field input-field">
-                  <label class="input-field__label" for="date">Дата добавления</label>
-                  <input class="input-field__input" name="date" type="text">
-                </div>
-
-                <div class="calling-for-admin__select-field select-field">
-                  <div class="select-field__input-wrapper">
-                    <label class="select-field__label" for="leads">Дата обработки</label>
-                    <input class="select-field__input" type="text" name="leads">
-                    <button class="select-field__button  select-field__button_down"></button>
-                  </div>
-                  <ul class="select-field__select">
-                    <li class="select-field__option">0</li>
-                    <li class="select-field__option">1</li>
-                    <li class="select-field__option">2</li>
-                  </ul>
-                </div>
-
-                <div class="calling-for-admin__select-field select-field">
-                  <div class="select-field__input-wrapper">
-                    <label class="select-field__label" for="leads">В лидах</label>
-                    <input class="select-field__input" type="text" name="leads">
-                    <button class="select-field__button  select-field__button_down"></button>
-                  </div>
-                  <ul class="select-field__select">
-                    <li class="select-field__option">0</li>
-                    <li class="select-field__option">1</li>
-                    <li class="select-field__option">2</li>
-                  </ul>
-                </div>
-
-              </div>
-              <button class="calling-for-admin__button button button_outline-green">Применить</button>
-            </form>
-          </div>
-          <div class="top-row__right-side">
-            <button class="calling-for-admin__button button button_green">Выгрузка</button>
-          </div>
-        </div>
 
         <div class="calling-for-admin__table table">
           <div class="table__row table__header">
@@ -361,16 +304,366 @@
             <div class="table__column">В лидах</div>
           </div>
           <div class="table__row">
-            <div class="table__column"><input type="checkbox"></div>
+            <div class="table__column">
+              <label class="checkbox-field" >
+                <input class="checkbox-field__checkbox" type="checkbox" name="completed">
+                <span class="checkbox-field__fake"></span>
+              </label>
+            </div>
             <div class="table__column">25.10</div>
             <div class="table__column">Ольга</div>
             <div class="table__column">25.10</div>
             <div class="table__column">Ольга</div>
-            <div class="table__column">www.dfpgodf[pd.ru</div>
-            <div class="table__column">1</div>
-            <div class="table__column">1</div>
-            <div class="table__column">0</div>
+            <div class="table__column">
+              <a class="link" href="#" >www.dfpgodf[pd.ru</a>
+            </div>
+            <div class="table__column">89105867736</div>
+            <div class="table__column"></div>
+            <div class="table__column">
+              <div class="select-field">
+                <div class="select-field__input-wrapper">
+                  <input class="input" value="0" type="text" name="leads" disabled>
+                  <button class="select-field__button  select-field__button_down"></button>
+                </div>
+                <ul class="select-field__select">
+                  <li class="select-field__option">0</li>
+                  <li class="select-field__option">1</li>
+                  <li class="select-field__option">2</li>
+                </ul>
+              </div>
+            </div>
           </div>
+          <div class="table__row">
+            <div class="table__column">
+              <label class="checkbox-field" >
+                <input class="checkbox-field__checkbox" type="checkbox" name="completed">
+                <span class="checkbox-field__fake"></span>
+              </label>
+            </div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">
+              <a class="link" href="#" >www.dfpgodf[pd.ru</a>
+            </div>
+            <div class="table__column">89105867736</div>
+            <div class="table__column"></div>
+            <div class="table__column">
+              <div class="select-field">
+                <div class="select-field__input-wrapper">
+                  <input class="input" value="0" type="text" name="leads" disabled>
+                  <button class="select-field__button  select-field__button_down"></button>
+                </div>
+                <ul class="select-field__select">
+                  <li class="select-field__option">0</li>
+                  <li class="select-field__option">1</li>
+                  <li class="select-field__option">2</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">
+              <label class="checkbox-field" >
+                <input class="checkbox-field__checkbox" type="checkbox" name="completed">
+                <span class="checkbox-field__fake"></span>
+              </label>
+            </div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">
+              <a class="link" href="#" >www.dfpgodf[pd.ru</a>
+            </div>
+            <div class="table__column">89105867736</div>
+            <div class="table__column"></div>
+            <div class="table__column">
+              <div class="select-field">
+                <div class="select-field__input-wrapper">
+                  <input class="input" value="0" type="text" name="leads" disabled>
+                  <button class="select-field__button  select-field__button_down"></button>
+                </div>
+                <ul class="select-field__select">
+                  <li class="select-field__option">0</li>
+                  <li class="select-field__option">1</li>
+                  <li class="select-field__option">2</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">
+              <label class="checkbox-field" >
+                <input class="checkbox-field__checkbox" type="checkbox" name="completed">
+                <span class="checkbox-field__fake"></span>
+              </label>
+            </div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">
+              <a class="link" href="#" >www.dfpgodf[pd.ru</a>
+            </div>
+            <div class="table__column">89105867736</div>
+            <div class="table__column"></div>
+            <div class="table__column">
+              <div class="select-field">
+                <div class="select-field__input-wrapper">
+                  <input class="input" value="0" type="text" name="leads" disabled>
+                  <button class="select-field__button  select-field__button_down"></button>
+                </div>
+                <ul class="select-field__select">
+                  <li class="select-field__option">0</li>
+                  <li class="select-field__option">1</li>
+                  <li class="select-field__option">2</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">
+              <label class="checkbox-field" >
+                <input class="checkbox-field__checkbox" type="checkbox" name="completed">
+                <span class="checkbox-field__fake"></span>
+              </label>
+            </div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">
+              <a class="link" href="#" >www.dfpgodf[pd.ru</a>
+            </div>
+            <div class="table__column">89105867736</div>
+            <div class="table__column"></div>
+            <div class="table__column">
+              <div class="select-field">
+                <div class="select-field__input-wrapper">
+                  <input class="input" value="0" type="text" name="leads" disabled>
+                  <button class="select-field__button  select-field__button_down"></button>
+                </div>
+                <ul class="select-field__select">
+                  <li class="select-field__option">0</li>
+                  <li class="select-field__option">1</li>
+                  <li class="select-field__option">2</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">
+              <label class="checkbox-field" >
+                <input class="checkbox-field__checkbox" type="checkbox" name="completed">
+                <span class="checkbox-field__fake"></span>
+              </label>
+            </div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">
+              <a class="link" href="#" >www.dfpgodf[pd.ru</a>
+            </div>
+            <div class="table__column">89105867736</div>
+            <div class="table__column"></div>
+            <div class="table__column">
+              <div class="select-field">
+                <div class="select-field__input-wrapper">
+                  <input class="input" value="0" type="text" name="leads" disabled>
+                  <button class="select-field__button  select-field__button_down"></button>
+                </div>
+                <ul class="select-field__select">
+                  <li class="select-field__option">0</li>
+                  <li class="select-field__option">1</li>
+                  <li class="select-field__option">2</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">
+              <label class="checkbox-field" >
+                <input class="checkbox-field__checkbox" type="checkbox" name="completed">
+                <span class="checkbox-field__fake"></span>
+              </label>
+            </div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">
+              <a class="link" href="#" >www.dfpgodf[pd.ru</a>
+            </div>
+            <div class="table__column">89105867736</div>
+            <div class="table__column"></div>
+            <div class="table__column">
+              <div class="select-field">
+                <div class="select-field__input-wrapper">
+                  <input class="input" value="0" type="text" name="leads" disabled>
+                  <button class="select-field__button  select-field__button_down"></button>
+                </div>
+                <ul class="select-field__select">
+                  <li class="select-field__option">0</li>
+                  <li class="select-field__option">1</li>
+                  <li class="select-field__option">2</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">
+              <label class="checkbox-field" >
+                <input class="checkbox-field__checkbox" type="checkbox" name="completed">
+                <span class="checkbox-field__fake"></span>
+              </label>
+            </div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">
+              <a class="link" href="#" >www.dfpgodf[pd.ru</a>
+            </div>
+            <div class="table__column">89105867736</div>
+            <div class="table__column"></div>
+            <div class="table__column">
+              <div class="select-field">
+                <div class="select-field__input-wrapper">
+                  <input class="input" value="0" type="text" name="leads" disabled>
+                  <button class="select-field__button  select-field__button_down"></button>
+                </div>
+                <ul class="select-field__select">
+                  <li class="select-field__option">0</li>
+                  <li class="select-field__option">1</li>
+                  <li class="select-field__option">2</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">
+              <label class="checkbox-field" >
+                <input class="checkbox-field__checkbox" type="checkbox" name="completed">
+                <span class="checkbox-field__fake"></span>
+              </label>
+            </div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">
+              <a class="link" href="#" >www.dfpgodf[pd.ru</a>
+            </div>
+            <div class="table__column">89105867736</div>
+            <div class="table__column"></div>
+            <div class="table__column">
+              <div class="select-field">
+                <div class="select-field__input-wrapper">
+                  <input class="input" value="0" type="text" name="leads" disabled>
+                  <button class="select-field__button  select-field__button_down"></button>
+                </div>
+                <ul class="select-field__select">
+                  <li class="select-field__option">0</li>
+                  <li class="select-field__option">1</li>
+                  <li class="select-field__option">2</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">
+              <label class="checkbox-field" >
+                <input class="checkbox-field__checkbox" type="checkbox" name="completed">
+                <span class="checkbox-field__fake"></span>
+              </label>
+            </div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">
+              <a class="link" href="#" >www.dfpgodf[pd.ru</a>
+            </div>
+            <div class="table__column">89105867736</div>
+            <div class="table__column"></div>
+            <div class="table__column">
+              <div class="select-field">
+                <div class="select-field__input-wrapper">
+                  <input class="input" value="0" type="text" name="leads" disabled>
+                  <button class="select-field__button  select-field__button_down"></button>
+                </div>
+                <ul class="select-field__select">
+                  <li class="select-field__option">0</li>
+                  <li class="select-field__option">1</li>
+                  <li class="select-field__option">2</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">
+              <label class="checkbox-field" >
+                <input class="checkbox-field__checkbox" type="checkbox" name="completed">
+                <span class="checkbox-field__fake"></span>
+              </label>
+            </div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">
+              <a class="link" href="#" >www.dfpgodf[pd.ru</a>
+            </div>
+            <div class="table__column">89105867736</div>
+            <div class="table__column"></div>
+            <div class="table__column">
+              <div class="select-field">
+                <div class="select-field__input-wrapper">
+                  <input class="input" value="0" type="text" name="leads" disabled>
+                  <button class="select-field__button  select-field__button_down"></button>
+                </div>
+                <ul class="select-field__select">
+                  <li class="select-field__option">0</li>
+                  <li class="select-field__option">1</li>
+                  <li class="select-field__option">2</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">
+              <label class="checkbox-field" >
+                <input class="checkbox-field__checkbox" type="checkbox" name="completed">
+                <span class="checkbox-field__fake"></span>
+              </label>
+            </div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">
+              <a class="link" href="#" >www.dfpgodf[pd.ru</a>
+            </div>
+            <div class="table__column">89105867736</div>
+            <div class="table__column"></div>
+            <div class="table__column">
+              <div class="select-field">
+                <div class="select-field__input-wrapper">
+                  <input class="input" value="0" type="text" name="leads" disabled>
+                  <button class="select-field__button  select-field__button_down"></button>
+                </div>
+                <ul class="select-field__select">
+                  <li class="select-field__option">0</li>
+                  <li class="select-field__option">1</li>
+                  <li class="select-field__option">2</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
         </div>
       </div>
     </section>
