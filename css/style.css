@@ -265,7 +265,7 @@ body {
 .select-field__select {
   display: none;
 
-  width: 100%;
+  min-width: 46px;
   max-height: 400px;
 
   position: absolute;
@@ -360,7 +360,7 @@ body {
 
 /* ---------- SCALES ----------*/
 
-.modal-authorization, .modal-primary-stream, .calling-for-admin, .main {
+.modal-authorization, .modal-primary-stream, .calling-for-admin, .modal-funnel, .main {
   --scale: 1;
 }
 
@@ -387,11 +387,6 @@ body {
 
   font-size: 24px;
 }
-
-/* ---------- PRIMARY STREAM CREATE ----------*/
-
-
-/* ---------- CREATE FOR EMPLOYEE ----------*/
 
 
 /* ---------- MAIN ----------*/
@@ -424,7 +419,7 @@ body {
 }
 
 .main .select-field__select {
-  right: -22px;
+  padding: 5px 0;
 
   font-size: 16px;
   line-height: 19px;
@@ -444,11 +439,10 @@ body {
 
   position: absolute;
   top: -9px;
-  right: 26px;
 
   transform: rotate(45deg);
 
-  background-color: transparent;
+  background-color: #fff;
   border-top: 1px solid #CFCFCF;
   border-left: 1px solid #CFCFCF;
 }
@@ -501,6 +495,63 @@ body {
 
 /* ---------- TOP ROW ----------*/
 
+.top-row {
+  display: flex;
+  align-items: flex-end;
+
+  margin-bottom: 22px;
+}
+
+.top-row__form {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex: 1 1 auto;
+
+  margin-right: 27px;
+}
+
+.form__fields {
+  display: flex;
+}
+
+.form__fields > div:nth-child(1) {
+  width: 103px;
+
+  margin-right: 45px;
+}
+
+.form__fields > div:nth-child(2), .form__fields > div:nth-child(3) {
+  width: 148px;
+
+  margin-right: 45px;
+}
+
+.form__fields > div:nth-child(4) {
+  width: 107px;
+}
+
+.top-row .select-field__select {
+  min-width: 182px;
+
+  right: -22px;
+  top: 60px;
+}
+
+.top-row .select-field__select::before {
+  right: 26px;
+}
+
+.top-row .input {
+  font-size: 22px;
+  line-height: 26px;
+
+  border: 1px solid #8E8E8E;
+}
+
+.top-row .input[name="dateAdded"]::placeholder {
+  text-align: center;
+}
 
 /* ---------- TABLE ----------*/
 
@@ -586,4 +637,74 @@ body {
   background-color: transparent;
 }
 
+.table .select-field__select {
+  right: -10px;
+}
 
+.table .select-field__select::before {
+  right: 14px;
+}
+
+/* ---------- MODAL FUNNEL ----------*/
+
+.modal-funnel .modal__container {
+  width: auto;
+}
+
+.modal-funnel .input {
+  margin-bottom: 29px;
+
+  border: 1px solid #8E8E8E;
+}
+
+
+.modal-funnel .table__header  {
+  padding: 0;
+}
+
+.modal-funnel .table__header .table__column {
+  padding: 21px 36px;
+}
+
+.modal-funnel .table__body .table__row {
+  padding: 15px 36px;
+}
+
+.modal-funnel .table__header > div:last-child {
+  border-left: 1px solid #fff;
+}
+
+.modal-funnel .table__row {
+  border: none;
+}
+
+.table__body {
+  width: 1124px;
+
+  display: flex;
+}
+
+.table__body > div {
+  display: flex;
+}
+
+.modal-funnel .table__header .table__column, .table__body > div {
+  flex: 1 1 auto;
+}
+
+.modal-funnel .table__column {
+  flex: 1 1 auto;
+}
+
+.modal-funnel .table__row {
+  border-bottom: 1px solid #D4D4D4;
+}
+
+.table__left-side .table__column:nth-child(1) .table__row {
+  border-left: 1px solid #D4D4D4;
+}
+
+
+.table__right-side .table__column:nth-child(2) .table__row {
+  border-right: 1px solid #D4D4D4;
+}
