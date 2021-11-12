@@ -74,9 +74,7 @@ body {
   font-family: 'Roboto', sans-serif;
 
   --custom-green: #099806;
-  --light-grey: #A1A1A1;
   --custom-blue: #A1C2C7;
-  --link-color: #0745A3;
 }
 
 .modal {
@@ -86,10 +84,13 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 100;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal__container {
@@ -98,6 +99,7 @@ body {
   padding: calc(49px * var(--scale)) calc(109px * var(--scale)) calc(78px * var(--scale)) calc(79px * var(--scale));
   position: relative;
 
+  background-color: #fff;
   box-shadow: 0px calc(4px * var(--scale)) calc(69px * var(--scale)) rgba(185, 185, 185, 0.25);
   border-radius: calc(10px * var(--scale));
 }
@@ -111,7 +113,7 @@ body {
 }
 
 .link {
-  color: var(--link-color);
+  color: #0745A3;
 }
 
 .button {
@@ -206,7 +208,7 @@ body {
 }
 
 .input::-webkit-input-placeholder {
-  color: var(--light-grey);
+  color: var(#A1A1A1);
 }
 
 .input[name=date] {
@@ -356,19 +358,14 @@ body {
   opacity: 1;
 }
 
-
 /* ---------- SCALES ----------*/
 
-.modal-authorization, .modal-primary-stream, .calling, .modal-funnel, .main {
+.modal-authorization, .modal-for-employee, .calling, .modal-funnel, .main {
   --scale: 1;
 }
 
-.modal-comment-click {
-  --scale: 0.67;
-}
-
-.modal-for-employee {
-  --scale: 0.73;
+.modal-comment-click, .modal-for-employee_leads-true {
+  --scale: 0.7;
 }
 
 /* ---------- AUTHORIZATION ----------*/
@@ -412,9 +409,15 @@ body {
 }
 
 .main .input {
-  padding: 5px 25px 5px 8px;
-  
   font-size: 16px;
+}
+
+.main .select-field .input {
+  padding: 5px 25px 5px 8px;
+}
+
+.main .input-field .input {
+  padding: 5px 8px;
 }
 
 .main .select-field__select {
@@ -793,5 +796,60 @@ body {
   width: 250px;
 
   text-align: center;
+}
+
+/* ---------- MAIN FUNNEL ----------*/
+
+.funnel__table .table__row {
+  justify-content:start;
+}
+
+.funnel__link {
+  position: relative;
+
+  color: #AFAFAF;
+}
+
+.funnel__link::before {
+  content: '';
+
+  display: inlne-block;
+  height: 1px;
+  width: 100%;
+
+  position: absolute;
+  bottom: 3px;
+
+  background-color: currentColor;
+}
+
+.funnel__table .table__header {
+  padding: 20px 13px;
+}
+
+.funnel__table .table__row:not(.table__header) {
+  padding: 13px;
+}
+
+.funnel__table .table__row .table__column:nth-child(1) {
+  width: 116px;
+
+  margin-right: 90px;
+}
+
+.funnel__table .table__row  .table__column:nth-child(2) {
+  width: 80px;
+
+  margin-right: 97px;
+}
+
+.funnel__table .table__row  .table__column:nth-child(3) {
+  width: 66px;
+
+  margin-right: 129px;
+}
+
+.funnel__table .table__row  .table__column:nth-child(4) {
+  width: 130px;
 }
 
