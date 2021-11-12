@@ -7,8 +7,11 @@ const isSelectVisible = (select) => {
 }
 
 const toggleSelectDisplay = (select) => {
-    const newDisplay = isSelectVisible(select) ? 'none' : 'block';
-    $(select).css('display', newDisplay);
+    if (isSelectVisible(select)) {
+        $(select).hide();
+    } else {
+        $(select).show();
+    }
 }
 
 const toggleInputBorderRadius = (select, input) => {
@@ -16,13 +19,12 @@ const toggleInputBorderRadius = (select, input) => {
    $(input).css('border-radius', newBorderRadius)
 }
 
-const toggleButtonClass = (select, button) => {
-    console.log(button)
-    if (isSelectVisible(select)) {
-        $(button).toggleClass('select-field__button_down select-field__button_up')
-    } else {
-        $(button).toggleClass('select-field__button_up select-field__button_down')
-    }
+const makeButtonDown = (button) => {
+    $(button).removeClass('select-field__button_up').addClass('select-field__button_down')
+}
+
+const toggleButtonClass = (button) => {
+    $(button).toggleClass('select-field__button_down select-field__button_up');
 }
 
 const toggleSelectFieldStyles = (selectField, button) => {
@@ -31,14 +33,27 @@ const toggleSelectFieldStyles = (selectField, button) => {
 
     toggleSelectDisplay(select);
     toggleInputBorderRadius(select, input)
-    toggleButtonClass(select, button);
+    toggleButtonClass(button);
+}
+
+const setAnotherBlockClickHandler = (select, button) => {
+    $(document).mouseup((event) => {
+        if (!button.is(event.target) && button.has(event.target).length === 0) {
+            $(select).hide();
+            makeButtonDown(button);
+        }
+    })
 }
 
 const setSelectHandlers = () => {
     for (let button of $('.select-field__button')) {
         $(button).click(function(event) {
-            const selectField = $(this).closest('.select-field')
-            toggleSelectFieldStyles(selectField, button)
+            const selectField = $(this).closest('.select-field');
+            const select = $(selectField).find('.select-field__select');
+
+            toggleSelectFieldStyles(selectField, button);
+            setAnotherBlockClickHandler(select, $(this));
+
             event.preventDefault();
         })
     }
@@ -57,18 +72,13 @@ const setSelectHandlers = () => {
     }
 }
 
-
 // --------- cacnel button ---------
-
-const cancelButtonClickHandler = (modal) => {
-    $(modal).css('display', 'none')
-}
 
 const setCancelButtonClickHandler = () => {
     for (let button of $('.cancel-button')) {
         $(button).click(function(event) {
             const modal = $(this).closest('.modal');
-            cancelButtonClickHandler(modal);
+            $(modal).hide();
             event.preventDefault();
         })
     }
@@ -76,19 +86,16 @@ const setCancelButtonClickHandler = () => {
 
 // --------- modal ---------
 
-const hideModal = (modal) => {
-    $(modal).css('display', 'none');
-}
-
 const setClickModalHandlers = () => {
     for (let modal of $('.modal')) {
         $(modal).click(function(event) {
             if ($(event.target).closest('.modal__container').length === 0) {
-                hideModal(modal);
+                $(modal).hide();
             }
         })
     }
 }
+
 
 // --------- input date ---------
 
@@ -98,7 +105,6 @@ const formatDate = (dayMonth) => {
 
 const getTodayDate = () => {
     const date = new Date(Date.now())
-    console.log(date.getMonth())
     return `${formatDate(date.getDate())}/${formatDate(date.getMonth() + 1)}/${date.getFullYear()}`
 }
 
@@ -121,12 +127,23 @@ const disableTableInputs = () => {
     }
 }
 
+// --------- funnel table link ---------
+
+const setFunnelLinkClickHandlers = () => {
+    for (let link of $('.funnel__link')) {
+        $(link).click(function() {
+            $('.modal-funnel').show();
+        })
+    }
+}
+
 $(document).ready(() => {
     setSelectHandlers();
     setCancelButtonClickHandler();
     setInputDateSettings();
     setClickModalHandlers();
     disableTableInputs();
+    setFunnelLinkClickHandlers();
 })
 
 
