@@ -28,7 +28,7 @@
     </div>
   </div>
   
-  <div class="modal modal-primary-stream" style="display: none;">
+  <div class="modal modal-for-employee" style="display: none;">
     <div class="modal__container">
       <h2 class="title">Создать</h2>
       <button class="cancel-button"></button>
@@ -98,7 +98,7 @@
     </div>
   </div>
 
-  <div class="modal modal-for-employee" style="display: none;">
+  <div class="modal modal-for-employee_leads-true" style="display: none;">
     <div class="modal__container">
       <h2 class="title">Создать</h2>
       <button class="cancel-button"></button>
@@ -182,7 +182,7 @@
     </div>
   </div>
 
-  <div class="modal modal-comment-click" style="display: none;">
+  <div class="modal modal-comment-click" style="display: auto;">
     <div class="modal__container">
       <h2 class="title">Создать</h2>
       <button class="cancel-button"></button>
@@ -265,7 +265,7 @@
           <label class="label" for="comment">Комментарий</label>
           <textarea class="textarea-field__textarea" name="comment"></textarea>
         </div>
-        <button class="comment-click-create__button button button_green">Создать</button>
+        <button class="comment-click-create__button button button_green">Сохранить</button>
       </form>
     </div>
   </div>
@@ -388,7 +388,7 @@
                 <label class="label" for="dateAdded">Дата добавления</label>
                 <input class="input" placeholder="一" name="dateAdded" type="text">
               </div>
-              <div class="select-field select-field_date">
+              <div class="select-field select-field_text">
                 <div class="select-field__input-wrapper">
                   <label class="label" for="dateCompleted">Дата обработки</label>
                   <input class="input" type="text" name="dateCompleted">
@@ -1224,7 +1224,7 @@
       </div>
     </section>
 
-    <section class="main__primary-stream primaty-stream" style="display: auto;">
+    <section class="main__primary-stream primaty-stream" style="display: none;">
       <div class="main__container">
         <h2 class="main__title">Первичный поток</h2>
         <div class="top-row">
@@ -2030,6 +2030,141 @@
             </div>
             <div class="table__column">Доработки вечером</div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="main__funnel funnel" style="display: none;">
+      <div class="main__container">
+        <h2 class="main__title">Воронка</h2>
+        <div class="top-row">
+          <form class="top-row__form form">
+            <div class="input-field input-field_date">
+              <label class="label" for="dateAdded">Дата</label>
+              <input class="input" placeholder="一" name="dateAdded" type="text">
+            </div>
+          </form>
+          <button class="button button_outline-green">Выгрузка</button>
+        </div>
+        <div class="funnel__table table">
+          <header class="table__row table__header">
+            <div class="table__column">Дата добавл.</div>
+            <div class="table__column">Прозвон</div>
+            <div class="table__column">Отклик</div>
+          </header>
+          <div class="table__row">
+            <div class="table__column">25.10</div>
+            <div class="table__column">13/3</div>
+            <div class="table__column">30/6</div>
+            <div class="table__column">
+              <a href="#" class="funnel__link">Подробнее</a>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">25.10</div>
+            <div class="table__column">13/3</div>
+            <div class="table__column">30/6</div>
+            <div class="table__column">
+              <a href="#" class="funnel__link">Подробнее</a>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">25.10</div>
+            <div class="table__column">13/3</div>
+            <div class="table__column">30/6</div>
+            <div class="table__column">
+              <a href="#" class="funnel__link">Подробнее</a>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">25.10</div>
+            <div class="table__column">13/3</div>
+            <div class="table__column">30/6</div>
+            <div class="table__column">
+              <a href="#" class="funnel__link">Подробнее</a>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">25.10</div>
+            <div class="table__column">13/3</div>
+            <div class="table__column">30/6</div>
+            <div class="table__column">
+              <a href="#" class="funnel__link">Подробнее</a>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">25.10</div>
+            <div class="table__column">13/3</div>
+            <div class="table__column">30/6</div>
+            <div class="table__column">
+              <a href="#" class="funnel__link">Подробнее</a>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">25.10</div>
+            <div class="table__column">13/3</div>
+            <div class="table__column">30/6</div>
+            <div class="table__column">
+              <a href="#" class="funnel__link">Подробнее</a>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">25.10</div>
+            <div class="table__column">13/3</div>
+            <div class="table__column">30/6</div>
+            <div class="table__column">
+              <a href="#" class="funnel__link">Подробнее</a>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">25.10</div>
+            <div class="table__column">13/3</div>
+            <div class="table__column">30/6</div>
+            <div class="table__column">
+              <a href="#" class="funnel__link">Подробнее</a>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">25.10</div>
+            <div class="table__column">13/3</div>
+            <div class="table__column">30/6</div>
+            <div class="table__column">
+              <a href="#" class="funnel__link">Подробнее</a>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">25.10</div>
+            <div class="table__column">13/3</div>
+            <div class="table__column">30/6</div>
+            <div class="table__column">
+              <a href="#" class="funnel__link">Подробнее</a>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">25.10</div>
+            <div class="table__column">13/3</div>
+            <div class="table__column">30/6</div>
+            <div class="table__column">
+              <a href="#" class="funnel__link">Подробнее</a>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">25.10</div>
+            <div class="table__column">13/3</div>
+            <div class="table__column">30/6</div>
+            <div class="table__column">
+              <a href="#" class="funnel__link">Подробнее</a>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">25.10</div>
+            <div class="table__column">13/3</div>
+            <div class="table__column">30/6</div>
+            <div class="table__column">
+              <a href="#" class="funnel__link">Подробнее</a>
+            </div>
+          </div>
+          
         </div>
       </div>
     </section>
