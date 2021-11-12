@@ -360,7 +360,7 @@ body {
 
 /* ---------- SCALES ----------*/
 
-.modal-authorization, .modal-primary-stream, .calling-for-admin, .modal-funnel, .main {
+.modal-authorization, .modal-primary-stream, .calling, .modal-funnel, .main {
   --scale: 1;
 }
 
@@ -408,7 +408,7 @@ body {
   letter-spacing: 0.045em;
 }
 
-.main__calling-for-admin {
+.main__calling {
   flex: 1 1 auto;
 }
 
@@ -521,13 +521,13 @@ body {
   margin-right: 45px;
 }
 
-.form__fields > div:nth-child(2), .form__fields > div:nth-child(3) {
+.top-row__input-field-date {
   width: 148px;
 
   margin-right: 45px;
 }
 
-.form__fields > div:nth-child(4) {
+.top-row__select-fied-leads {
   width: 107px;
 }
 
@@ -588,46 +588,6 @@ body {
   color: #353535;
 }
 
-.calling-for-admin__table .table__column:nth-child(6), .calling-for-admin__table .table__column:nth-child(1) {
-  text-align: center;
-}
-
-.calling-for-admin__table .table__row .table__column:nth-child(1) {
-  width: 102px;
-}
-
-.calling-for-admin__table .table__row .table__column:nth-child(2) {
-  width: 113px;
-}
-
-.calling-for-admin__table .table__row .table__column:nth-child(3) {
-  width: 110px;
-}
-
-.calling-for-admin__table .table__row .table__column:nth-child(4) {
-  width: 85px;
-}
-
-.calling-for-admin__table .table__row .table__column:nth-child(5) {
-  width: 105px;
-}
-
-.calling-for-admin__table .table__row .table__column:nth-child(6) {
-  width: 230px;
-}
-
-.calling-for-admin__table .table__row .table__column:nth-child(7) {
-  width: 150px;
-}
-
-.calling-for-admin__table .table__row .table__column:nth-child(8) {
-  width: 252px;
-}
-
-.calling-for-admin__table .table__row .table__column:nth-child(9) {
-  width: 70px;
-}
-
 .table .input {
   border: none;
 
@@ -645,10 +605,58 @@ body {
   right: 14px;
 }
 
+/* ---------- CALLING  ----------*/
+
+.calling__table .table__column:nth-child(6), .calling__table .table__column:nth-child(1) {
+  text-align: center;
+}
+
+.calling__table .table__row .table__column:nth-child(1) {
+  width: 102px;
+}
+
+.calling__table .table__row .table__column:nth-child(2) {
+  width: 113px;
+}
+
+.calling__table .table__row .table__column:nth-child(3) {
+  width: 110px;
+}
+
+.calling__table .table__row .table__column:nth-child(4) {
+  width: 85px;
+}
+
+.calling__table .table__row .table__column:nth-child(5) {
+  width: 105px;
+}
+
+.calling__table .table__row .table__column:nth-child(6) {
+  width: 230px;
+}
+
+.calling__table .table__row .table__column:nth-child(7) {
+  width: 150px;
+}
+
+.calling__table .table__row .table__column:nth-child(8) {
+  width: 252px;
+}
+
+.calling__table .table__row .table__column:nth-child(9) {
+  width: 70px;
+}
+
+
+
 /* ---------- MODAL FUNNEL ----------*/
 
 .modal-funnel .modal__container {
   width: auto;
+}
+
+.modal-funnel .main__title {
+  margin-bottom: 37px;
 }
 
 .modal-funnel .input {
@@ -657,54 +665,54 @@ body {
   border: 1px solid #8E8E8E;
 }
 
-
-.modal-funnel .table__header  {
-  padding: 0;
-}
-
 .modal-funnel .table__header .table__column {
-  padding: 21px 36px;
+  padding: 21px 36px 20px 36px;
+
+  flex: 1 1 auto;
 }
 
-.modal-funnel .table__body .table__row {
-  padding: 15px 36px;
-}
-
-.modal-funnel .table__header > div:last-child {
+.modal-funnel .table__header > .table__column:last-child{
   border-left: 1px solid #fff;
 }
 
 .modal-funnel .table__row {
-  border: none;
-}
-
-.table__body {
-  width: 1124px;
-
   display: flex;
+  align-items: center;
+
+  padding: 0;
 }
 
-.table__body > div {
+.modal-funnel .table__row:not(.table__header) .table__column {
   display: flex;
+  align-items: center;
+
+  width: 562px;
+
+  padding: 16px 36px;
 }
 
-.modal-funnel .table__header .table__column, .table__body > div {
-  flex: 1 1 auto;
+.modal-funnel .table__subcolumn {
+  word-wrap: break-word;
 }
 
-.modal-funnel .table__column {
-  flex: 1 1 auto;
+.modal-funnel .table__column .table__subcolumn:first-child {
+  width: 170px;
+
+  margin-right: 46px;
 }
 
-.modal-funnel .table__row {
-  border-bottom: 1px solid #D4D4D4;
+.modal-funnel .table__column .table__subcolumn:last-child {
+  width: 265px;
 }
 
-.table__left-side .table__column:nth-child(1) .table__row {
-  border-left: 1px solid #D4D4D4;
+.modal-funnel .table__footer {
+  background-color: rgba(196, 196, 196, 0.43);
 }
 
+.table__subtotal {
+  font-weight: 500;
+}
 
-.table__right-side .table__column:nth-child(2) .table__row {
-  border-right: 1px solid #D4D4D4;
+.table__total {
+  font-weight: 700;
 }

@@ -270,9 +270,9 @@
     </div>
   </div>
 
-  <div class="modal modal-funnel">
+  <div class="modal modal-funnel" style="display: none;">
     <div class="modal__container">
-      <h2 class="title">Воронка</h2>
+      <h2 class="main__title">Воронка</h2>
       <button class="cancel-button"></button>
       <div class="input-field">
         <label class="label" for="date">Дата</label>
@@ -282,50 +282,72 @@
         <header class="table__row table__header">
           <div class="table__column">Прозвон</div>
           <div class="table__column">Отклики</div>
-        </header>
-        <div class="table__body">
-          <div class="table__left-side">
-            <div class="table__column">
-              <div class="table__row">FL</div>
-              <div class="table__row">Freelance</div>
-              <div class="table__row">Другие</div>
-              <div class="table__row">Соц. сети</div>
-              <div class="table__row">Итого:</div>
-              <div class="table__row">Итого общее:</div>
-            </div>
-            <div class="table__column">
-              <div class="table__row">13/10</div>
-              <div class="table__row">13/10</div>
-              <div class="table__row">13/10</div>
-              <div class="table__row">13/10</div>
-              <div class="table__row">13/10</div>
-              <div class="table__row">33/10</div>
-            </div>
+        </header>          
+        <div class="table__row">
+          <div class="table__column">
+            <div class="table__subcolumn">FL</div>
+            <div class="table__subcolumn">13/10</div>
           </div>
-          <div class="table__right-side">
-            <div class="table__column">
-              <div class="table__row">FL</div>
-              <div class="table__row">Freelance</div>
-              <div class="table__row">Другие</div>
-              <div class="table__row">Соц. сети</div>
-              <div class="table__row">Итого:</div>
-              <div class="table__row"></div>
-            </div>
-            <div class="table__column">
-              <div class="table__row">13/10</div>
-              <div class="table__row">13/10</div>
-              <div class="table__row">13/10</div>
-              <div class="table__row">13/10</div>
-              <div class="table__row">13/10</div>
-              <div class="table__row"></div>
-            </div>
+          <div class="table__column">
+            <div class="table__subcolumn">FL</div>
+            <div class="table__subcolumn">13/10</div>
           </div>
         </div>
+        <div class="table__row">
+          <div class="table__column">
+            <div class="table__subcolumn">Freelance</div>
+            <div class="table__subcolumn">13/10</div>
+          </div>
+          <div class="table__column">
+            <div class="table__subcolumn">Freelance</div>
+            <div class="table__subcolumn">13/10</div>
+          </div>
+        </div>
+        <div class="table__row">
+          <div class="table__column">
+            <div class="table__subcolumn">Другие</div>
+            <div class="table__subcolumn">13/10</div>
+          </div>
+          <div class="table__column">
+            <div class="table__subcolumn">Другие</div>
+            <div class="table__subcolumn">13/10</div>
+          </div>
+        </div>
+        <div class="table__row">
+          <div class="table__column">
+            <div class="table__subcolumn">Соц. сети</div>
+            <div class="table__subcolumn">13/10</div>
+          </div>
+          <div class="table__column">
+            <div class="table__subcolumn">Соц. сети</div>
+            <div class="table__subcolumn">13/10</div>
+          </div>
+        </div>
+        <div class="table__row">
+          <div class="table__column">
+            <div class="table__subcolumn table__subtotal">Итого:</div>
+            <div class="table__subcolumn">33/10</div>
+          </div>
+          <div class="table__column">
+            <div class="table__subcolumn table__subtotal">Итого:</div>
+            <div class="table__subcolumn">33/10</div>
+          </div>
+        </div>
+        <footer class="table__row table__footer">
+          <div class="table__column">
+            <div class="table__subcolumn table__total">Итого общее:</div>
+            <div class="table__subcolumn">33/10</div>
+          </div>
+          <div class="table__column">
+            <div class="table__subcolumn"></div>
+            <div class="table__subcolumn"></div>
+          </div>
+        </footer>
       </div>
     </div>
   </div>
 
-  <main class="main" style="display: none;">
+  <main class="main" style="display: auto;">
     <aside class="main__aside aside">
       <nav class="aside__nav nav">
         <h2 class="nav__title main__title">Меню</h2>
@@ -342,9 +364,10 @@
         </ul>
       </nav>
     </aside>
-    <section class="main__calling-for-admin calling-for-admin">
+    
+    <section class="main__calling calling callin-for-admin" style="display: auto;">
       <div class="main__container">
-        <h2 class="calling-for-admin__title main__title">Прозвон</h2>
+        <h2 class="main__title">Прозвон</h2>
 
         <div class="top-row">
           <form action="" class="top-row__form form">
@@ -361,11 +384,11 @@
                   <li class="select-field__option">2</li>
                 </ul>
               </div>
-              <div class="input-field">
+              <div class="input-field top-row__input-field-date">
                 <label class="label" for="dateAdded">Дата добавления</label>
                 <input class="input" placeholder="一" name="dateAdded" type="text">
               </div>
-              <div class="select-field">
+              <div class="select-field top-row__input-field-date">
                 <div class="select-field__input-wrapper">
                   <label class="label" for="dateCompleted">Дата обработки</label>
                   <input class="input" type="text" name="dateCompleted">
@@ -377,7 +400,7 @@
                   <li class="select-field__option">2</li>
                 </ul>
               </div>
-              <div class="select-field">
+              <div class="select-field top-row__select-fied-leads">
                 <div class="select-field__input-wrapper">
                   <label class="label" for="leads">В лидах</label>
                   <input class="input" type="text" name="leads">
@@ -395,7 +418,436 @@
           <button class="button button_green">Выгрузка</button>
         </div>
 
-        <div class="calling-for-admin__table table">
+        <div class="calling__table table">
+          <div class="table__row table__header">
+            <div class="table__column">Обработано</div>
+            <div class="table__column">Дата добавл.</div>
+            <div class="table__column">Кто добавил</div>
+            <div class="table__column">Дата обр.</div>
+            <div class="table__column">Кем обраб.</div>
+            <div class="table__column">Сайт</div>
+            <div class="table__column">Номер контакта</div>
+            <div class="table__column">Описание и ссылка на задачу</div>
+            <div class="table__column">В лидах</div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">
+              <label class="checkbox-field" >
+                <input class="checkbox-field__checkbox" type="checkbox" name="completed">
+                <span class="checkbox-field__fake"></span>
+              </label>
+            </div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">
+              <a class="link" href="#" >www.dfpgodf[pd.ru</a>
+            </div>
+            <div class="table__column">89105867736</div>
+            <div class="table__column"></div>
+            <div class="table__column">
+              <div class="select-field">
+                <div class="select-field__input-wrapper">
+                  <input class="input" value="0" type="text" name="leads" disabled>
+                  <button class="select-field__button  select-field__button_down"></button>
+                </div>
+                <ul class="select-field__select">
+                  <li class="select-field__option">0</li>
+                  <li class="select-field__option">1</li>
+                  <li class="select-field__option">2</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">
+              <label class="checkbox-field" >
+                <input class="checkbox-field__checkbox" type="checkbox" name="completed">
+                <span class="checkbox-field__fake"></span>
+              </label>
+            </div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">
+              <a class="link" href="#" >www.dfpgodf[pd.ru</a>
+            </div>
+            <div class="table__column">89105867736</div>
+            <div class="table__column"></div>
+            <div class="table__column">
+              <div class="select-field">
+                <div class="select-field__input-wrapper">
+                  <input class="input" value="0" type="text" name="leads" disabled>
+                  <button class="select-field__button  select-field__button_down"></button>
+                </div>
+                <ul class="select-field__select">
+                  <li class="select-field__option">0</li>
+                  <li class="select-field__option">1</li>
+                  <li class="select-field__option">2</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">
+              <label class="checkbox-field" >
+                <input class="checkbox-field__checkbox" type="checkbox" name="completed">
+                <span class="checkbox-field__fake"></span>
+              </label>
+            </div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">
+              <a class="link" href="#" >www.dfpgodf[pd.ru</a>
+            </div>
+            <div class="table__column">89105867736</div>
+            <div class="table__column"></div>
+            <div class="table__column">
+              <div class="select-field">
+                <div class="select-field__input-wrapper">
+                  <input class="input" value="0" type="text" name="leads" disabled>
+                  <button class="select-field__button  select-field__button_down"></button>
+                </div>
+                <ul class="select-field__select">
+                  <li class="select-field__option">0</li>
+                  <li class="select-field__option">1</li>
+                  <li class="select-field__option">2</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">
+              <label class="checkbox-field" >
+                <input class="checkbox-field__checkbox" type="checkbox" name="completed">
+                <span class="checkbox-field__fake"></span>
+              </label>
+            </div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">
+              <a class="link" href="#" >www.dfpgodf[pd.ru</a>
+            </div>
+            <div class="table__column">89105867736</div>
+            <div class="table__column"></div>
+            <div class="table__column">
+              <div class="select-field">
+                <div class="select-field__input-wrapper">
+                  <input class="input" value="0" type="text" name="leads" disabled>
+                  <button class="select-field__button  select-field__button_down"></button>
+                </div>
+                <ul class="select-field__select">
+                  <li class="select-field__option">0</li>
+                  <li class="select-field__option">1</li>
+                  <li class="select-field__option">2</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">
+              <label class="checkbox-field" >
+                <input class="checkbox-field__checkbox" type="checkbox" name="completed">
+                <span class="checkbox-field__fake"></span>
+              </label>
+            </div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">
+              <a class="link" href="#" >www.dfpgodf[pd.ru</a>
+            </div>
+            <div class="table__column">89105867736</div>
+            <div class="table__column"></div>
+            <div class="table__column">
+              <div class="select-field">
+                <div class="select-field__input-wrapper">
+                  <input class="input" value="0" type="text" name="leads" disabled>
+                  <button class="select-field__button  select-field__button_down"></button>
+                </div>
+                <ul class="select-field__select">
+                  <li class="select-field__option">0</li>
+                  <li class="select-field__option">1</li>
+                  <li class="select-field__option">2</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">
+              <label class="checkbox-field" >
+                <input class="checkbox-field__checkbox" type="checkbox" name="completed">
+                <span class="checkbox-field__fake"></span>
+              </label>
+            </div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">
+              <a class="link" href="#" >www.dfpgodf[pd.ru</a>
+            </div>
+            <div class="table__column">89105867736</div>
+            <div class="table__column"></div>
+            <div class="table__column">
+              <div class="select-field">
+                <div class="select-field__input-wrapper">
+                  <input class="input" value="0" type="text" name="leads" disabled>
+                  <button class="select-field__button  select-field__button_down"></button>
+                </div>
+                <ul class="select-field__select">
+                  <li class="select-field__option">0</li>
+                  <li class="select-field__option">1</li>
+                  <li class="select-field__option">2</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">
+              <label class="checkbox-field" >
+                <input class="checkbox-field__checkbox" type="checkbox" name="completed">
+                <span class="checkbox-field__fake"></span>
+              </label>
+            </div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">
+              <a class="link" href="#" >www.dfpgodf[pd.ru</a>
+            </div>
+            <div class="table__column">89105867736</div>
+            <div class="table__column"></div>
+            <div class="table__column">
+              <div class="select-field">
+                <div class="select-field__input-wrapper">
+                  <input class="input" value="0" type="text" name="leads" disabled>
+                  <button class="select-field__button  select-field__button_down"></button>
+                </div>
+                <ul class="select-field__select">
+                  <li class="select-field__option">0</li>
+                  <li class="select-field__option">1</li>
+                  <li class="select-field__option">2</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">
+              <label class="checkbox-field" >
+                <input class="checkbox-field__checkbox" type="checkbox" name="completed">
+                <span class="checkbox-field__fake"></span>
+              </label>
+            </div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">
+              <a class="link" href="#" >www.dfpgodf[pd.ru</a>
+            </div>
+            <div class="table__column">89105867736</div>
+            <div class="table__column"></div>
+            <div class="table__column">
+              <div class="select-field">
+                <div class="select-field__input-wrapper">
+                  <input class="input" value="0" type="text" name="leads" disabled>
+                  <button class="select-field__button  select-field__button_down"></button>
+                </div>
+                <ul class="select-field__select">
+                  <li class="select-field__option">0</li>
+                  <li class="select-field__option">1</li>
+                  <li class="select-field__option">2</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">
+              <label class="checkbox-field" >
+                <input class="checkbox-field__checkbox" type="checkbox" name="completed">
+                <span class="checkbox-field__fake"></span>
+              </label>
+            </div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">
+              <a class="link" href="#" >www.dfpgodf[pd.ru</a>
+            </div>
+            <div class="table__column">89105867736</div>
+            <div class="table__column"></div>
+            <div class="table__column">
+              <div class="select-field">
+                <div class="select-field__input-wrapper">
+                  <input class="input" value="0" type="text" name="leads" disabled>
+                  <button class="select-field__button  select-field__button_down"></button>
+                </div>
+                <ul class="select-field__select">
+                  <li class="select-field__option">0</li>
+                  <li class="select-field__option">1</li>
+                  <li class="select-field__option">2</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">
+              <label class="checkbox-field" >
+                <input class="checkbox-field__checkbox" type="checkbox" name="completed">
+                <span class="checkbox-field__fake"></span>
+              </label>
+            </div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">
+              <a class="link" href="#" >www.dfpgodf[pd.ru</a>
+            </div>
+            <div class="table__column">89105867736</div>
+            <div class="table__column"></div>
+            <div class="table__column">
+              <div class="select-field">
+                <div class="select-field__input-wrapper">
+                  <input class="input" value="0" type="text" name="leads" disabled>
+                  <button class="select-field__button  select-field__button_down"></button>
+                </div>
+                <ul class="select-field__select">
+                  <li class="select-field__option">0</li>
+                  <li class="select-field__option">1</li>
+                  <li class="select-field__option">2</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">
+              <label class="checkbox-field" >
+                <input class="checkbox-field__checkbox" type="checkbox" name="completed">
+                <span class="checkbox-field__fake"></span>
+              </label>
+            </div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">
+              <a class="link" href="#" >www.dfpgodf[pd.ru</a>
+            </div>
+            <div class="table__column">89105867736</div>
+            <div class="table__column"></div>
+            <div class="table__column">
+              <div class="select-field">
+                <div class="select-field__input-wrapper">
+                  <input class="input" value="0" type="text" name="leads" disabled>
+                  <button class="select-field__button  select-field__button_down"></button>
+                </div>
+                <ul class="select-field__select">
+                  <li class="select-field__option">0</li>
+                  <li class="select-field__option">1</li>
+                  <li class="select-field__option">2</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__column">
+              <label class="checkbox-field" >
+                <input class="checkbox-field__checkbox" type="checkbox" name="completed">
+                <span class="checkbox-field__fake"></span>
+              </label>
+            </div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">25.10</div>
+            <div class="table__column">Ольга</div>
+            <div class="table__column">
+              <a class="link" href="#" >www.dfpgodf[pd.ru</a>
+            </div>
+            <div class="table__column">89105867736</div>
+            <div class="table__column"></div>
+            <div class="table__column">
+              <div class="select-field">
+                <div class="select-field__input-wrapper">
+                  <input class="input" value="0" type="text" name="leads" disabled>
+                  <button class="select-field__button  select-field__button_down"></button>
+                </div>
+                <ul class="select-field__select">
+                  <li class="select-field__option">0</li>
+                  <li class="select-field__option">1</li>
+                  <li class="select-field__option">2</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="main__calling calling callin-for-employee" style="display: none;">
+      <div class="main__container">
+        <h2 class="main__title">Прозвон</h2>
+
+        <div class="top-row">
+          <form action="" class="top-row__form form">
+            <div class="form__fields">
+              <div class="select-field">
+                <div class="select-field__input-wrapper">
+                  <label class="label" for="completed">Обработано</label>
+                  <input class="input" type="text" name="completed">
+                  <button class="select-field__button  select-field__button_down"></button>
+                </div>
+                <ul class="select-field__select">
+                  <li class="select-field__option">0</li>
+                  <li class="select-field__option">1</li>
+                  <li class="select-field__option">2</li>
+                </ul>
+              </div>
+              <div class="input-field top-row__input-field-date">
+                <label class="label" for="dateAdded">Дата добавления</label>
+                <input class="input" placeholder="一" name="dateAdded" type="text">
+              </div>
+              <div class="select-field top-row__input-field-date">
+                <div class="select-field__input-wrapper">
+                  <label class="label" for="dateCompleted">Дата обработки</label>
+                  <input class="input" type="text" name="dateCompleted">
+                  <button class="select-field__button  select-field__button_down"></button>
+                </div>
+                <ul class="select-field__select">
+                  <li class="select-field__option">0</li>
+                  <li class="select-field__option">1</li>
+                  <li class="select-field__option">2</li>
+                </ul>
+              </div>
+              <div class="select-field top-row__select-fied-leads">
+                <div class="select-field__input-wrapper">
+                  <label class="label" for="leads">В лидах</label>
+                  <input class="input" type="text" name="leads">
+                  <button class="select-field__button  select-field__button_down"></button>
+                </div>
+                <ul class="select-field__select">
+                  <li class="select-field__option">0</li>
+                  <li class="select-field__option">1</li>
+                  <li class="select-field__option">2</li>
+                </ul>
+              </div>
+            </div>
+            <button class="button button_outline-green">Применить</button>
+          </form>
+        </div>
+
+        <div class="calling__table table">
           <div class="table__row table__header">
             <div class="table__column">Обработано</div>
             <div class="table__column">Дата добавл.</div>
