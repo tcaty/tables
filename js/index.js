@@ -48,9 +48,11 @@ const setSelectHandlers = () => {
             const selectField = $(this).closest('.select-field')
             const input = $(selectField).find('.input')
             const select = $(selectField).find('.select-field__select')
-            
+            const button = $(selectField).find('.select-field__button');
+
             input.val($(this).text())
             $(select).css('display', 'none')
+            toggleButtonClass(selectField, button)
         })
     }
 }
@@ -107,11 +109,24 @@ const setInputDateSettings = () => {
     }
 }
 
+// --------- table input ---------
+
+const disableInput = (input) => {
+    $(input).attr('disabled', 'disabled');
+}
+
+const disableTableInputs = () => {
+    for (let input of $('.table .input')) {
+        disableInput(input);
+    }
+}
+
 $(document).ready(() => {
     setSelectHandlers();
     setCancelButtonClickHandler();
     setInputDateSettings();
     setClickModalHandlers();
+    disableTableInputs();
 })
 
 
