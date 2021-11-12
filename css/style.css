@@ -202,8 +202,7 @@ body {
 }
 
 .select-field .input {
-  --select-field-input-pr: calc(33px * var(--scale));
-  padding-right: var(--select-field-input-pr);
+  padding-right: calc(33px * var(--scale));
 }
 
 .input::-webkit-input-placeholder {
@@ -249,14 +248,14 @@ body {
 }
 
 .select-field__button_up {
-  bottom: calc(1.2em  - var(--button-size) / 2);
+  bottom: calc(1.8em * var(--scale)  - var(--button-size) / 2);
 
   border-right: 1px solid #000;
   border-top: 1px solid #000;
 }
 
 .select-field__button_down {
-  bottom: calc(1.2em);
+  bottom: calc(1.8em * var(--scale));
 
   border-left: 1px solid #000;
   border-bottom: 1px solid #000;
@@ -408,12 +407,12 @@ body {
   letter-spacing: 0.045em;
 }
 
-.main__calling {
+.main section {
   flex: 1 1 auto;
 }
 
 .main .input {
-  padding: 5px;
+  padding: 5px 25px 5px 8px;
   
   font-size: 16px;
 }
@@ -453,6 +452,40 @@ body {
   text-align: center;
 
   border: none;
+}
+
+.select-field_text .select-field__select {
+  width: 182px;
+
+  right: -22px;
+
+  text-align-last: left;
+}
+
+.select-field_text .select-field__select::before {
+  right: 26px;
+}
+
+.select-field_number .select-field__select {
+  right: -10px;
+}
+
+.select-field_number .select-field__select::before {
+  right: 14px;
+}
+
+.main .select-field__button_up {
+  bottom: calc(1.3em - var(--button-size) / 2);
+
+  border-right: 1px solid #000;
+  border-top: 1px solid #000;
+}
+
+.main .select-field__button_down {
+  bottom: 1.3em;
+
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
 }
 
 /* ---------- NAV ----------*/
@@ -515,31 +548,34 @@ body {
   display: flex;
 }
 
-.form__fields > div:nth-child(1) {
-  width: 103px;
-
+.form__fields > div {
   margin-right: 45px;
 }
 
-.top-row__input-field-date {
-  width: 148px;
-
-  margin-right: 45px;
+.form__fields > div:not(.select-field) .input {
+  padding: 5px 8px;
 }
 
-.top-row__select-fied-leads {
+.top-row .select-field_number {
   width: 107px;
 }
 
-.top-row .select-field__select {
-  min-width: 182px;
-
-  right: -22px;
-  top: 60px;
+.top-row .select-field_date,
+.top-row .input-field_date {
+  width: 148px;
 }
 
-.top-row .select-field__select::before {
-  right: 26px;
+.top-row .select-field_text {
+  width: 150px;
+}
+
+.top-row .input-field_date-small {
+  width: 103px;
+}
+
+.top-row .select-field__option {
+  font-size: 16px;
+  line-height: 19px;
 }
 
 .top-row .input {
@@ -553,6 +589,10 @@ body {
   text-align: center;
 }
 
+.top-row .select-field__select {
+  top: 63px;
+}
+
 /* ---------- TABLE ----------*/
 
 .table__row {
@@ -562,13 +602,7 @@ body {
 }
 
 .table__header {
-  padding: 21px 53px 18px 6px ;
-
   background-color: var(--custom-blue);
-}
-
-.table__row:not(.table__header) {
-  padding: 10px 53px 8px 6px;
 }
 
 .table__header .table__column {
@@ -597,15 +631,15 @@ body {
   background-color: transparent;
 }
 
-.table .select-field__select {
-  right: -10px;
-}
-
-.table .select-field__select::before {
-  right: 14px;
-}
-
 /* ---------- CALLING  ----------*/
+
+.calling .table__header {
+  padding: 21px 58px 18px 13px;
+}
+
+.calling .table__row:not(.table__header) {
+  padding: 8px 58px 6px 13px;
+}
 
 .calling__table .table__column:nth-child(6), .calling__table .table__column:nth-child(1) {
   text-align: center;
@@ -646,8 +680,6 @@ body {
 .calling__table .table__row .table__column:nth-child(9) {
   width: 70px;
 }
-
-
 
 /* ---------- MODAL FUNNEL ----------*/
 
@@ -709,10 +741,57 @@ body {
   background-color: rgba(196, 196, 196, 0.43);
 }
 
-.table__subtotal {
+.modal-funnel .table__subtotal {
   font-weight: 500;
 }
 
-.table__total {
+.modal-funnel .table__total {
   font-weight: 700;
 }
+
+/* ---------- MAIN PRIMARY STREAM ----------*/
+
+.primary-stream__table .table__header {
+  padding: 17px 20px;
+}
+
+.primary-stream__table .table__row:not(.table__header) {
+  padding: 8px 20px;
+}
+
+.primary-stream__table .table__row .table__column:nth-child(1) {
+  width: 63px;
+}
+
+.primary-stream__table .table__row .table__column:nth-child(2) {
+  width: 130px;
+}
+
+.primary-stream__table .table__row .table__column:nth-child(3) {
+  width: 95px;
+}
+
+.primary-stream__table .table__row .table__column:nth-child(4) {
+  width: 230px;
+
+  text-align: center;
+}
+
+.primary-stream__table .table__row .table__column:nth-child(5) {
+  width: 67px;
+}
+
+.primary-stream__table .table__row .table__column:nth-child(6) {
+  width: 85px;
+}
+
+.primary-stream__table .table__row .table__column:nth-child(7) {
+  width: 75px;
+}
+
+.primary-stream__table .table__row .table__column:nth-child(8) {
+  width: 250px;
+
+  text-align: center;
+}
+
