@@ -100,7 +100,6 @@ body {
   position: relative;
 
   background-color: #fff;
-  box-shadow: 0px calc(4px * var(--scale)) calc(69px * var(--scale)) rgba(185, 185, 185, 0.25);
   border-radius: calc(10px * var(--scale));
 }
 
@@ -358,6 +357,10 @@ body {
   opacity: 1;
 }
 
+.modal .select-field__select {
+  width: 100%;
+}
+
 /* ---------- SCALES ----------*/
 
 .modal-authorization, .modal-for-employee, .calling, .modal-funnel, .main {
@@ -383,7 +386,6 @@ body {
 
   font-size: 24px;
 }
-
 
 /* ---------- MAIN ----------*/
 
@@ -625,6 +627,12 @@ body {
   color: #353535;
 }
 
+.table__text, .link {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .table .input {
   border: none;
 
@@ -632,6 +640,10 @@ body {
   line-height: 28px;
 
   background-color: transparent;
+}
+
+.table__comment {
+  cursor: pointer;
 }
 
 /* ---------- CALLING  ----------*/
